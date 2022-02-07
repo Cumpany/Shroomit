@@ -7,7 +7,7 @@ public class ItemList : MonoBehaviour
     public enum Items
     {
         Empty, // dont touch or invenetory breaks
-        // add any items ater here
+        // add any items after here
         Apple,
         Banana,
         Orange
