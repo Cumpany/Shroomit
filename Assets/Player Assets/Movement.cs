@@ -9,8 +9,6 @@ public class Movement : MonoBehaviour
     float horizontal;
     float vertical;
 
-    float moveLimiter = 0.7f;
-
     public float runSpeed = 10.0f;
 
     // Start is called before the first frame update
