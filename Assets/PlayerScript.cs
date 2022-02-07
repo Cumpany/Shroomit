@@ -1,21 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    static public float health = 100, maxHealth = 100;
+    public Image healthBarImage;
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            
+            Damage(10);
+        }
     }
-    
+    public void Damage(float d)
+    {
+        Debug.Log($"gay took {d} damgaeg");
+        health -= d;
+        UpdateHealthBar();
+    }
+    public void UpdateHealthBar() 
+    {
+        healthBarImage.fillAmount = Mathf.Clamp(PlayerScript.health / PlayerScript.maxHealth, 0, 1f);
+    }
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Enemy")

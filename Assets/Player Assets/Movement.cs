@@ -1,3 +1,4 @@
+using System.Data.SqlTypes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,12 +23,31 @@ public class Movement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+        var cHorizontal = rb.velocity.x;
+        var cVertical = rb.velocity.y;
+        if (cHorizontal < 0)
+        {
+            cHorizontal = -cHorizontal;
+        }
+        if (cVertical < 0)
+        {
+            cVertical = -cVertical;
+        }
+        bool priority;
+        if (cHorizontal < cVertical)
+        {
+            priority = true;
+        }
+        else
+        {
+            priority = false;
+        }
 
-        if (horizontal != 0)
+        if (!priority && horizontal != 0)
         {
             vertical = 0;
         }
-        else if (vertical != 0)
+        else if (priority && vertical != 0)
         {
             horizontal = 0;
         }
