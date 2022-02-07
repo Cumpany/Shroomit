@@ -7,7 +7,8 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //gayass
+        Debug.Log("Jag är inte gay");
     }
 
     // Update is called once per frame
