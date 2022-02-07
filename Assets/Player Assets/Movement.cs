@@ -24,17 +24,19 @@ public class Movement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+
+        if (horizontal != 0)
+        {
+            vertical = 0;
+        }
+        else if (vertical != 0)
+        {
+            horizontal = 0;
+        }
     }
 
  void FixedUpdate()
     {
-        if (horizontal != 0 && vertical != 0) //Check for diagonal movement
-        {
-            //Limits movement speed diagonally
-            horizontal *= moveLimiter;
-            vertical *= moveLimiter;
-        }
-
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
 }
