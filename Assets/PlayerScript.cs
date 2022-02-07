@@ -11,7 +11,6 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            
             Damage(10);
         }
     }
@@ -20,6 +19,10 @@ public class PlayerScript : MonoBehaviour
         Debug.Log($"gay took {d} damgaeg");
         health -= d;
         UpdateHealthBar();
+        if (health <= 0)
+        {
+            Application.Quit(69420);
+        }
     }
     public void UpdateHealthBar() 
     {
