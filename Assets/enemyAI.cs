@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//KUK :D
 public class enemyAI : MonoBehaviour
 {
     [HideInInspector]
