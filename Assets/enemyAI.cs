@@ -38,7 +38,7 @@ public class enemyAI : MonoBehaviour
             Debug.Log("Gay2");
             target = col.gameObject;
             Debug.Log(target.name);
-            hasTarget = true;
+            hasTarget = true;   
         }
     }
 
