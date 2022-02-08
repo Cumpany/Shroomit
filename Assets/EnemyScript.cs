@@ -14,6 +14,9 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (enemyHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
