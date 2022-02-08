@@ -22,7 +22,8 @@ public class PlayerInventory : MonoBehaviour
     }
     void Start()
     {
-        
+        DrawInv();
+        Inventory.SetActive(false);
     }
     void DrawInv()
     {
@@ -64,6 +65,7 @@ public class PlayerInventory : MonoBehaviour
             if (AnyInvSlot(i))
             {
                 Destroy(item);
+                DrawInv();
             }
             else Debug.LogWarning("inventory full");
         }
