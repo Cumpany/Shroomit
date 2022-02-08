@@ -52,7 +52,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            Debug.Log("hahah gay x2");
+            Debug.Log("hahah gay x69420");
             Damage(10);
         } 
     }
