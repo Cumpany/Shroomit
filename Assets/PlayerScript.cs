@@ -39,6 +39,19 @@ public class PlayerScript : MonoBehaviour
     public void UpdateHealthBar() 
     {
         healthBarImage.fillAmount = Mathf.Clamp(PlayerScript.health / PlayerScript.maxHealth, 0, 1f);
+        if (health < 15)
+        {
+            healthBarImage.color = Color.red;
+        }
+        else if (health < 50)
+        {
+            healthBarImage.color = Color.yellow;
+        }
+        else
+        {
+            healthBarImage.color = Color.green;
+        }
+        
     }
     void OnTriggerEnter2D(Collider2D col)
     {
