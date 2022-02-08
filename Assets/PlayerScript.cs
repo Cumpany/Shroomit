@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerScript : MonoBehaviour
 {
     static public float health = 100, maxHealth = 100;
+    static float iFrames = 0;
     public Image healthBarImage;
     void Update()
     {
@@ -14,14 +15,25 @@ public class PlayerScript : MonoBehaviour
             Damage(10);
         }
     }
+    void FixedUpdate()
+    {
+        if (iFrames > 0)
+        {
+            iFrames--;
+        }
+    }
     public void Damage(float d)
     {
-        Debug.Log($"gay took {d} damgaeg");
-        health -= d;
-        UpdateHealthBar();
-        if (health <= 0)
+        if (iFrames <= 0)
         {
-            Application.Quit(69420);
+            Debug.Log($"gay took {d} damgaeg");
+            health -= d;
+            UpdateHealthBar();
+            if (health <= 0)
+            {
+                Application.Quit(69420);
+            }
+            iFrames = 30; // time between being able to take damage
         }
     }
     public void UpdateHealthBar() 
@@ -34,6 +46,14 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.Log("hahah gay");
             Damage(10);
-        }
+        } 
+    }
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("hahah gay x2");
+            Damage(10);
+        } 
     }
 }
