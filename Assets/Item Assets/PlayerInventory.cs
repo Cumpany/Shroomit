@@ -6,14 +6,44 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     public ItemList.Items[,] Inv = new ItemList.Items[3, 9];
-    public ItemList.Items Cursor = new ItemList.Items();
-    // Start is called before the first frame update
-    public void AddItem(int x, int y, ItemList.Items i)
+    private ItemList.Items Cursor = new ItemList.Items();
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log(col.gameObject.name);
+        GameObject item = col.gameObject;
+        if (item.tag == "DroppedItem")
+        {
+            ItemList.Items i = (ItemList.Items) Convert.ToInt32(item.name);
+            if (AnyInvSlot(i))
+            {
+                Destroy(item);
+            }
+            else Debug.LogWarning("inventory full");
+        }
+    }
+    public bool AnyInvSlot(ItemList.Items i)
+    {
+        for (var x = 0; x < 3; x++)
+        {
+            for (var y = 0; y < 9; y++)
+            {
+                if (AddItem(x,y,i))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public bool AddItem(int x, int y, ItemList.Items i)
     {
         if (IsSlotFree(x,y))
         {
             Inv[x,y] = i;
+            return true;
         }
+        return false;
     }
     public void CursorToInv(int x,int y)
     {
