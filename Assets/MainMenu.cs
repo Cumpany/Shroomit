@@ -26,6 +26,6 @@ public class MainMenu : MonoBehaviour
     }
     public void Quit()
     {
-        EditorApplication.Exit(0);
+        Application.Quit(0);
     }
 }
