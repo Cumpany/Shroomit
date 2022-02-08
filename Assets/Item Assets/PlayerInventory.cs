@@ -66,8 +66,8 @@ public class PlayerInventory : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col.gameObject.name);
         GameObject item = col.gameObject;
+        //Debug.Log(col.gameObject.name);
         if (item.tag == "DroppedItem")
         {
             ItemList.Items i = (ItemList.Items) Convert.ToInt32(item.name);
