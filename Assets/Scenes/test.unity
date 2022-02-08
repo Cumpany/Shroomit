@@ -1149,6 +1149,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Inventory: {fileID: 1546703175}
+  i1: {fileID: 2021954160}
+  i2: {fileID: 997656042}
+  i3: {fileID: 2108035742}
+  i4: {fileID: 1904382455}
+  i5: {fileID: 184449025}
+  i6: {fileID: 1677976040}
+  i7: {fileID: 175340587}
+  i8: {fileID: 718079768}
+  i9: {fileID: 221740885}
   Error: {fileID: 21300000, guid: 59d8b444824fbc541a50c557e3520c07, type: 3}
   Apple: {fileID: 21300000, guid: 8cc094bd653f3244da8955d86c2d86a9, type: 3}
   Banana: {fileID: 21300000, guid: 8096ecfbe4ab0ea42b65dee6451ea58f, type: 3}

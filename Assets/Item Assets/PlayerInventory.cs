@@ -10,7 +10,9 @@ public class PlayerInventory : MonoBehaviour
     public ItemList.Items[,] Inv = new ItemList.Items[3, 3];
     private ItemList.Items Cursor = new ItemList.Items();
     [SerializeField] private GameObject Inventory;
+    [SerializeField] private GameObject i1,i2,i3,i4,i5,i6,i7,i8,i9;
     public Sprite Error, Apple, Banana, Orange;
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.I))
@@ -25,9 +27,21 @@ public class PlayerInventory : MonoBehaviour
         {
             for (var y = 0; y < 3; y++)
             {
-                var k = transform.Find($"{x},{y}").transform.GetComponent<Image>().sprite;
-                // var i = transform.GetChild((x+1*y+1)-1).transform.GetComponent<Image>().sprite;
-                // ItemList.Items j = (ItemList.Items)(x+1*y+1)-1;
+                Sprite k;
+                switch ((x+1*y+1)-1)
+                {
+                    case 0: k = i1.transform.GetComponent(typeof(Sprite));
+                        break;
+                    case 1: k = i1.transform.GetComponent(typeof(Sprite));
+                        break;
+                    case 2: k = i1.transform.GetComponent(typeof(Sprite));
+                        break;
+                    case 3: k = i1.transform.GetComponent(typeof(Sprite)).Sprite;
+                        break;
+                    default:
+                        break;
+                }
+                
                 switch ((x+1*y+1)-1)
                 {
                     case 0:
