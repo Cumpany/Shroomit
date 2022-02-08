@@ -22,9 +22,7 @@ public class PlayerInventory : MonoBehaviour
     }
     void Start()
     {
-        Sprite Apple = Resources.Load<Sprite>("Apple");
-        Sprite Banana = Resources.Load<Sprite>("Banana");
-        Sprite Orange = Resources.Load<Sprite>("Orange");
+        
     }
     void DrawInv()
     {
@@ -33,23 +31,24 @@ public class PlayerInventory : MonoBehaviour
                 switch ((int)Inv[x])
                 {
                     case 0:
-                    Debug.Log($"case 0 at {x}");
+                    // Debug.Log($"case 0 at {x}");
+                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("empty");
                         break;
                     case 1:
-                    Debug.Log($"case 1 at {x}");
-                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("ItemAssets/apple");
+                    // Debug.Log($"case 1 at {x}");
+                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("apple");
                         break;
                     case 2:
-                    Debug.Log($"case 2 at {x}");
-                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("ItemAssets/banana");
+                    // Debug.Log($"case 2 at {x}");
+                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("banana");
                         break;
                     case 3:
-                    Debug.Log($"case 3 at {x}");
-                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("ItemAssets/orange");
+                    // Debug.Log($"case 3 at {x}");
+                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("orange");
                         break;
                     default:
                     Debug.LogError($"Invalid Item ID at {x}");
-                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("ItemAssets/error");
+                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("error");
                         break;
                 }
         }

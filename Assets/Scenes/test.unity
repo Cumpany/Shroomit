@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1148,20 +1148,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1af263f1b851424fbcd08570bef5161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inv: 000000000000000000000000000000000000000000000000000000000000000000000000
   Inventory: {fileID: 1546703175}
-  i1: {fileID: 2021954160}
-  i2: {fileID: 997656042}
-  i3: {fileID: 2108035742}
-  i4: {fileID: 1904382455}
-  i5: {fileID: 184449025}
-  i6: {fileID: 1677976040}
-  i7: {fileID: 175340587}
-  i8: {fileID: 718079768}
-  i9: {fileID: 221740885}
-  Error: {fileID: 21300000, guid: 59d8b444824fbc541a50c557e3520c07, type: 3}
-  Apple: {fileID: 21300000, guid: 8cc094bd653f3244da8955d86c2d86a9, type: 3}
-  Banana: {fileID: 21300000, guid: 8096ecfbe4ab0ea42b65dee6451ea58f, type: 3}
-  Orange: {fileID: 21300000, guid: cb441427bd57813409c54d6ee0191e8b, type: 3}
+  InvSlots:
+  - {fileID: 2021954160}
+  - {fileID: 997656042}
+  - {fileID: 2108035742}
+  - {fileID: 1904382455}
+  - {fileID: 184449025}
+  - {fileID: 1677976040}
+  - {fileID: 175340587}
+  - {fileID: 718079768}
+  - {fileID: 221740885}
 --- !u!1 &926781226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,7 +1353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1868,7 +1866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2119,7 +2117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2155,7 +2153,7 @@ GameObject:
   - component: {fileID: 1987092778}
   - component: {fileID: 1987092777}
   m_Layer: 0
-  m_Name: placeholder lol alfred
+  m_Name: placeholder lol albin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2321,7 +2319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2580,7 +2578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
