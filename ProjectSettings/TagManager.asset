@@ -7,6 +7,8 @@ TagManager:
   - HealthBar
   - Enemy
   - DroppedItem
+  - Inventory
+  - InvSlot
   layers:
   - Default
   - TransparentFX
