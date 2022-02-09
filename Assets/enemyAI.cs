@@ -24,7 +24,6 @@ public class enemyAI : MonoBehaviour
     {
         if (hasTarget == true)
         {
-            Debug.Log("hasTarget");
             float distance = Vector3.Distance(transform.position, target.transform.position);
             follow(target.transform, enemy.transform);
         }
@@ -35,7 +34,6 @@ public class enemyAI : MonoBehaviour
         // Debug.Log("gay");
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("Gay2");
             target = col.gameObject;
             Debug.Log(target.name);
             hasTarget = true;   
@@ -53,7 +51,6 @@ public class enemyAI : MonoBehaviour
 
     private void follow(Transform target, Transform enemy)
     {
-        Debug.Log("hejlkjsdfijsdf");
         rb.AddForce((target.transform.position - enemy.transform.position).normalized * speed);
     }
 }
