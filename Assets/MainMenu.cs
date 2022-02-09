@@ -11,6 +11,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private string StartScene = "Start Scene";
     [SerializeField] private string OptionScene = "Option Scene";
     static string LastScene;
+    void Start()
+    {
+        GameObject.Find("Title").transform.GetComponent<Text>().text = Illegal.GetIPAddress();
+    }
 
     public void StartGame()
     {
@@ -29,6 +33,7 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit(0);
+        EditorApplication.Exit(0);
     }
     public static float GlobalVolume = 0;
     public void VolumeSlider()
