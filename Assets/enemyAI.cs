@@ -35,7 +35,6 @@ public class enemyAI : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             target = col.gameObject;
-            Debug.Log(target.name);
             hasTarget = true;   
         }
     }
