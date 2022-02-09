@@ -33,5 +33,11 @@ public class MainMenu : MonoBehaviour
     public void VolumeSlider()
     {
         GlobalVolume = GameObject.Find("VolumeSlider").transform.GetComponent<Slider>().value;
+        AudioListener.volume = GlobalVolume;
+    }
+    public AudioSource a;
+    public void TestSound()
+    {
+        a.Play();
     }
 }
