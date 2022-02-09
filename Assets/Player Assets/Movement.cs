@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
 
     float horizontal;
     float vertical;
+    float moveLimiter = 0.7f;
 
     public float runSpeed = 10.0f;
 
@@ -55,6 +56,12 @@ public class Movement : MonoBehaviour
 
  void FixedUpdate()
     {
+        if (horizontal != 0 && vertical != 0) // Check for diagonal movement
+        {
+            // limit movement speed diagonally, so you move at 70% speed
+            horizontal *= moveLimiter;
+            vertical *= moveLimiter;
+        }
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
 }

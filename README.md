@@ -3,4 +3,4 @@
 epic
 **﷽**
 .
-OM DU LÄSER DETTA ÄR DU GAY
+OM DU LÄSER DETTA ÄR DU GAYy_D!½½½½§§´´3q+''¨.a<<<		<	o
