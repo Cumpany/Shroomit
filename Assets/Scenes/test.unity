@@ -943,7 +943,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 926781228}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 7.73
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1729,7 +1729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1546703176
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2351,6 +2351,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1423302192160902682, guid: 4c4ba4e7a6af8a1429a47ff327e1a241, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423302192160902682, guid: 4c4ba4e7a6af8a1429a47ff327e1a241, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5478980468019554818, guid: 4c4ba4e7a6af8a1429a47ff327e1a241, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2426,7 +2434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102928782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3435.2405}
+  m_LocalPosition: {x: 0, y: 0, z: -73.72}
   m_LocalScale: {x: 77, y: 77, z: 38.16934}
   m_Children: []
   m_Father: {fileID: 1546703176}

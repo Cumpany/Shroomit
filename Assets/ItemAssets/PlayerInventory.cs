@@ -29,29 +29,29 @@ public class PlayerInventory : MonoBehaviour
     {
         for (var x = 0; x < 9; x++)
         {
-                switch ((int)Inv[x])
-                {
-                    case 0:
-                    // Debug.Log($"case 0 at {x}");
-                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("empty");
-                        break;
-                    case 1:
-                    // Debug.Log($"case 1 at {x}");
-                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("apple");
-                        break;
-                    case 2:
-                    // Debug.Log($"case 2 at {x}");
-                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("banana");
-                        break;
-                    case 3:
-                    // Debug.Log($"case 3 at {x}");
-                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("orange");
-                        break;
-                    default:
-                    Debug.LogError($"Invalid Item ID at {x}");
-                    InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("error");
-                        break;
-                }
+            switch ((int)Inv[x])
+            {
+                case 0:
+                // Debug.Log($"case 0 at {x}");
+                InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("empty");
+                    break;
+                case 1:
+                // Debug.Log($"case 1 at {x}");
+                InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("apple");
+                    break;
+                case 2:
+                // Debug.Log($"case 2 at {x}");
+                InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("banana");
+                    break;
+                case 3:
+                // Debug.Log($"case 3 at {x}");
+                InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("orange");
+                    break;
+                default:
+                Debug.LogError($"Invalid Item ID at {x}");
+                InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("error");
+                    break;
+            }
         }
     }
 

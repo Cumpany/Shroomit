@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -27,5 +28,10 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit(0);
+    }
+    public static float GlobalVolume = 0;
+    public void VolumeSlider()
+    {
+        GlobalVolume = GameObject.Find("VolumeSlider").transform.GetComponent<Slider>().value;
     }
 }
