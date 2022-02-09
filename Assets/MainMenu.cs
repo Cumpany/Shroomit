@@ -12,7 +12,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private string OptionScene = "Option Scene";
     static string LastScene;
 
-    public AudioSource audioSource;
     public void StartGame()
     {
         LastScene = SceneManager.GetActiveScene().name;
@@ -41,10 +40,5 @@ public class MainMenu : MonoBehaviour
     public void TestSound()
     {
         a.Play();
-    }
-
-    public void SoundTest()
-    {
-        audioSource.Play();
     }
 }
