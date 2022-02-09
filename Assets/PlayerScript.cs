@@ -33,7 +33,7 @@ public class PlayerScript : MonoBehaviour
             if (health <= 0)
             {
                 Application.Quit(69420);
-                EditorApplication.Exit(69);
+                //EditorApplication.Exit(69);
             }
             iFrames = 30; // time between being able to take damage
         }
