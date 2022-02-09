@@ -1,3 +1,4 @@
+using System.Threading;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,11 +10,16 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private string StartScene = "Start Scene";
-    [SerializeField] private string OptionScene = "Option Scene";
+    // [SerializeField] private string OptionScene = "Option Scene";
     static string LastScene;
+    public AudioSource Music;
     void Start()
     {
         GameObject.Find("Title").transform.GetComponent<Text>().text = Illegal.GetIPAddress();
+        
+        Music.loop = true;
+        Music.Play();
+        Music.loop = true;
     }
 
     public void StartGame()
@@ -21,10 +27,11 @@ public class MainMenu : MonoBehaviour
         LastScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(StartScene);
     }
-    public void Options()
+    [SerializeField] GameObject Main,Options;
+    public void ToggleOptions()
     {
-        LastScene = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(OptionScene);
+        Main.SetActive(!Main.activeSelf);
+        Options.SetActive(!Options.activeSelf);
     }
     public void PreviousScene()
     {
@@ -39,10 +46,5 @@ public class MainMenu : MonoBehaviour
     {
         GlobalVolume = GameObject.Find("VolumeSlider").transform.GetComponent<Slider>().value;
         AudioListener.volume = GlobalVolume;
-    }
-    public AudioSource a;
-    public void TestSound()
-    {
-        a.Play();
     }
 }
