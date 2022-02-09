@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
@@ -26,12 +27,13 @@ public class PlayerScript : MonoBehaviour
     {
         if (iFrames <= 0)
         {
-            Debug.Log($"gay took {d} damgaeg");
+            Debug.Log($"took {d} damgaeg");
             health -= d;
             UpdateHealthBar();
             if (health <= 0)
             {
                 Application.Quit(69420);
+                EditorApplication.Exit(69);
             }
             iFrames = 30; // time between being able to take damage
         }
@@ -66,7 +68,6 @@ public class PlayerScript : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            Debug.Log("hahah gay x69420");
             Damage(10);
         } 
     }
