@@ -33,7 +33,6 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit(0);
-        EditorApplication.Exit(0);
     }
     public static float GlobalVolume = 0;
     public void VolumeSlider()
