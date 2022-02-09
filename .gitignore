@@ -64,3 +64,4 @@ ProjectSettings/EditorBuildSettings.asset
 *.asset
 UserSettings/EditorUserSettings.asset
 Ny Mapp/
+.vscode/settings.json
