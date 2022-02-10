@@ -1,3 +1,4 @@
+using System.Security.Principal;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,19 @@ public class PlayerScript : MonoBehaviour
     static public float health = 100, maxHealth = 100;
     static float iFrames = 0;
     public Image healthBarImage;
+    void Start()
+    {
+        // Debug.Log($"{Screen.width} {Screen.height}");
+        if ((float)((float)Screen.width / (float)Screen.height) > 1.75f && (float)((float)Screen.width / (float)Screen.height) < 1.8f)
+        {
+            // Debug.Log("didnt move HB    " + (float)((float)Screen.width / (float)Screen.height));
+        }
+        else
+        {
+            // Debug.Log("moved HB    " + (float)((float)Screen.width / (float)Screen.height));
+            GameObject.Find("HB").GetComponent<RectTransform>().position = new Vector3(1.1f, 6, 0);
+        }
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))
