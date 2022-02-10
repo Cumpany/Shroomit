@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public Animator animator;
+
     public Rigidbody2D rb;
 
     float horizontal;

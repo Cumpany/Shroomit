@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
+    public Animator animator;
+
     static public float health = 100, maxHealth = 100;
     static float iFrames = 0;
     public Image healthBarImage;
