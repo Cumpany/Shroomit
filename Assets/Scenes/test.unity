@@ -1066,8 +1066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1af263f1b851424fbcd08570bef5161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Inv: 000000000000000000000000000000000000000000000000000000000000000000000000
-  Inventory: {fileID: 1546703175}
+  Inventory: 
+  InventoryObject: {fileID: 1546703175}
   InvSlots:
   - {fileID: 2021954160}
   - {fileID: 997656042}
