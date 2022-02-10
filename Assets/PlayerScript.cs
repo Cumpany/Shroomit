@@ -31,6 +31,10 @@ public class PlayerScript : MonoBehaviour
         {
             Damage(10);
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
     void FixedUpdate()
     {
