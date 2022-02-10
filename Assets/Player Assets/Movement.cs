@@ -64,6 +64,44 @@ public class Movement : MonoBehaviour
             horizontal *= moveLimiter;
             vertical *= moveLimiter;
         }
+        
+        if (horizontal > 0)
+        {
+            animator.SetBool("IsWalkingRight", true);
+            animator.SetBool("IsWalkingLeft", false);
+            animator.SetBool("IsWalkingUp", false);
+            animator.SetBool("IsWalkingDown", false);
+        }
+        else if (horizontal < 0)
+        {
+            animator.SetBool("IsWalkingLeft", true);
+            animator.SetBool("IsWalkingRight", false);
+            animator.SetBool("IsWalkingUp", false);
+            animator.SetBool("IsWalkingDown", false);
+        }
+
+        if (vertical > 0)
+        {
+            animator.SetBool("IsWalkingUp", true);
+            animator.SetBool("IsWalkingDown", false);
+            animator.SetBool("IsWalkingRight", false);
+            animator.SetBool("IsWalkingLeft", false);
+        }
+        else if (vertical < 0)
+        {
+            animator.SetBool("IsWalkingDown", true);
+            animator.SetBool("IsWalkingUp", false);
+            animator.SetBool("IsWalkingRight", false);
+            animator.SetBool("IsWalkingLeft", false);
+        }
+
+        if (horizontal == 0 && vertical == 0)
+        {
+            animator.SetBool("IsWalkingDown", false);
+            animator.SetBool("IsWalkingUp", false);
+            animator.SetBool("IsWalkingRight", false);
+            animator.SetBool("IsWalkingLeft", false);
+        }
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
 }
