@@ -67,41 +67,55 @@ public class Movement : MonoBehaviour
         
         if (horizontal > 0)
         {
-            animator.SetBool("IsWalkingRight", true);
-            animator.SetBool("IsWalkingLeft", false);
-            animator.SetBool("IsWalkingUp", false);
-            animator.SetBool("IsWalkingDown", false);
+            ChangeAnim("right");
         }
         else if (horizontal < 0)
         {
-            animator.SetBool("IsWalkingLeft", true);
-            animator.SetBool("IsWalkingRight", false);
-            animator.SetBool("IsWalkingUp", false);
-            animator.SetBool("IsWalkingDown", false);
+            ChangeAnim("left");
         }
 
         if (vertical > 0)
         {
-            animator.SetBool("IsWalkingUp", true);
-            animator.SetBool("IsWalkingDown", false);
-            animator.SetBool("IsWalkingRight", false);
-            animator.SetBool("IsWalkingLeft", false);
+            ChangeAnim("up");
         }
         else if (vertical < 0)
         {
-            animator.SetBool("IsWalkingDown", true);
-            animator.SetBool("IsWalkingUp", false);
-            animator.SetBool("IsWalkingRight", false);
-            animator.SetBool("IsWalkingLeft", false);
+            ChangeAnim("down");
         }
 
         if (horizontal == 0 && vertical == 0)
         {
-            animator.SetBool("IsWalkingDown", false);
-            animator.SetBool("IsWalkingUp", false);
-            animator.SetBool("IsWalkingRight", false);
-            animator.SetBool("IsWalkingLeft", false);
+            ChangeAnim("idle");
         }
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+    }
+
+    void ChangeAnim(string d)
+    {
+        animator.SetBool("IsWalkingDown", false);
+        animator.SetBool("IsWalkingUp", false);
+        animator.SetBool("IsWalkingRight", false);
+        animator.SetBool("IsWalkingLeft", false);
+        switch (d)
+        {
+            case "idle":
+                break;
+            case "up":
+            animator.SetBool("IsWalkingUp", true);
+                break;
+            case "down":
+            animator.SetBool("IsWalkingDown", true);
+                break;
+            case "right":
+            animator.SetBool("IsWalkingRight", true);
+                break;
+            case "left":
+            animator.SetBool("IsWalkingLeft", true);
+                break;
+            default:
+            Debug.LogError("fucking idiot, wrong input to animation");
+                break;
+        }
+        
     }
 }
