@@ -31,7 +31,6 @@ public class enemyAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        // Debug.Log("gay");
         if (col.gameObject.tag == "Player")
         {
             target = col.gameObject;
