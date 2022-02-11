@@ -14,5 +14,5 @@ Gamers
 | Attack        | LMB           |
 | Exit Game     | Alt+F4        |
 | Easteregg     | K*32767       |
-| Placeholder   | Placeholder   |
+| L             | Death         |
 | Placeholder   | Placeholder   |

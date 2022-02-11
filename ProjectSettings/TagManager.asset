@@ -9,6 +9,7 @@ TagManager:
   - DroppedItem
   - Inventory
   - InvSlot
+  - AttackHitbox
   layers:
   - Default
   - TransparentFX

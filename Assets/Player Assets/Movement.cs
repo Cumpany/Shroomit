@@ -89,6 +89,7 @@ public class Movement : MonoBehaviour
         }
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
+    public static int Direction;
 
     void ChangeAnim(string d)
     {
@@ -101,15 +102,19 @@ public class Movement : MonoBehaviour
             case "idle":
                 break;
             case "up":
+            Direction = 1;
             animator.SetBool("IsWalkingUp", true);
                 break;
             case "down":
+            Direction = 3;
             animator.SetBool("IsWalkingDown", true);
                 break;
             case "right":
+            Direction = 2;
             animator.SetBool("IsWalkingRight", true);
                 break;
             case "left":
+            Direction = 4;
             animator.SetBool("IsWalkingLeft", true);
                 break;
             default:

@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Security.Principal;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,7 +12,10 @@ public class PlayerScript : MonoBehaviour
 
     static public float health = 100, maxHealth = 100;
     static float iFrames = 0;
+    static float aFrames = 0;
     public Image healthBarImage;
+    public static int PlayerDamage = 5;
+    [SerializeField] private GameObject AttackHitbox;
     void Start()
     {
         // Debug.Log($"{Screen.width} {Screen.height}");
@@ -31,6 +35,10 @@ public class PlayerScript : MonoBehaviour
         {
             Damage(10);
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
@@ -41,6 +49,43 @@ public class PlayerScript : MonoBehaviour
         if (iFrames > 0)
         {
             iFrames--;
+        }
+        if (aFrames > 0)
+        {
+            aFrames--;
+        }
+        if (aFrames == 1)
+        {
+            AttackHitbox.transform.position = new Vector3(0,0,0);
+        }
+    }
+    Vector3 a;
+    public void Attack()
+    {
+        if (aFrames == 0)
+        {
+            switch (Movement.Direction)
+            {
+                case 1:
+                a = new Vector3(0,1,0);
+                    break;
+                case 2:
+                a = new Vector3(1,0,0);
+                    break;
+                case 3:
+                a = new Vector3(0,-1,0);
+                    break;
+                case 4:
+                a = new Vector3(-1,0,0);
+                    break;
+                default:
+                Debug.LogError("Somethings wrong, i can feel it");
+                    break;
+            }
+            
+            AttackHitbox.transform.localPosition = 
+            GameObject.FindGameObjectWithTag("Player").transform.position + a;
+            aFrames = 30;
         }
     }
     public void Damage(float d)
