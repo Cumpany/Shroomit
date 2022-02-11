@@ -10,6 +10,8 @@ public class PlayerScript : MonoBehaviour
 {
     public Animator animator;
 
+    public AudioSource Hurt;
+
     static public float health = 100, maxHealth = 100;
     static float iFrames = 0;
     static float aFrames = 0;
@@ -94,6 +96,8 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.Log($"took {d} damgaeg");
             health -= d;
+            Hurt.Play();
+            Hurt.loop =false;
             UpdateHealthBar();
             if (health <= 0)
             {
