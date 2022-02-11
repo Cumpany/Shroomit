@@ -22,6 +22,11 @@ public class PlayerInventory : MonoBehaviour
         }
         if (Cursor != 0)
         {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("Pressed Q");
+                DropCursor();
+            }
             CursorObject.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
         else
@@ -74,6 +79,15 @@ public class PlayerInventory : MonoBehaviour
             return;
         }
         CursorObject.transform.GetChild(0).transform.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Cursor.ToString());
+    }
+    [SerializeField] private GameObject ItemPreset;
+    public void DropCursor()
+    {
+        var i = Instantiate(ItemPreset);
+        i.transform.position = CursorObject.transform.position;
+        i.transform.position = new Vector3(i.transform.position.x,i.transform.position.y,(int)Cursor);
+        i.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Cursor.ToString());
+        Cursor = 0;
     }
     public bool AnyInvSlot(ItemList.Items i)
     {
@@ -132,5 +146,6 @@ public class PlayerInventory : MonoBehaviour
         {
             Inv[x] = 0;
         }
+        Cursor = 0;
     }
 }
