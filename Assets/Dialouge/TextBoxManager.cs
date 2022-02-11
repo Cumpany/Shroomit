@@ -22,6 +22,8 @@ public class TextBoxManager : MonoBehaviour
     {
         player = FindObjectOfType<Movement>();
 
+        textBox.SetActive(false);
+
         if (textFile != null)
         {
             textLines = (textFile.text.Split('\n'));
@@ -42,5 +44,16 @@ public class TextBoxManager : MonoBehaviour
     public void CurrentLineUpdate()
     {
         currentLine += 1;
+
+        if (currentLine > textLines.Length - 1)
+        {
+            textBox.SetActive(false);
+            currentLine = 0;
+        }
+    }
+
+    public void ActivateTextBox()
+    {
+        textBox.SetActive(true);
     }
 }
