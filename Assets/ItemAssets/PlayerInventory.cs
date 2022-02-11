@@ -9,8 +9,9 @@ public class PlayerInventory : MonoBehaviour
 {
     public ItemList.Items[] Inv = new ItemList.Items[9];
     private ItemList.Items Cursor = new ItemList.Items();
+    [SerializeField] private GameObject CursorObject;
     [SerializeField] private GameObject Inventory;
-    [SerializeField]private GameObject[] InvSlots = new GameObject[9];
+    [SerializeField] private GameObject[] InvSlots = new GameObject[9];
     
     void Update()
     {
@@ -18,6 +19,14 @@ public class PlayerInventory : MonoBehaviour
         {
             Inventory.SetActive(!Inventory.activeSelf);
             DrawInv();
+        }
+        if (Cursor != 0)
+        {
+            CursorObject.transform.position = Input.mousePosition;
+        }
+        else
+        {
+            CursorObject.transform.position = new Vector3(0,3,0);
         }
     }
     void Start()
@@ -29,29 +38,7 @@ public class PlayerInventory : MonoBehaviour
     {
         for (var x = 0; x < 9; x++)
         {
-            switch ((int)Inv[x])
-            {
-                case 0:
-                // Debug.Log($"case 0 at {x}");
-                InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("empty");
-                    break;
-                case 1:
-                // Debug.Log($"case 1 at {x}");
-                InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("apple");
-                    break;
-                case 2:
-                // Debug.Log($"case 2 at {x}");
-                InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("banana");
-                    break;
-                case 3:
-                // Debug.Log($"case 3 at {x}");
-                InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("orange");
-                    break;
-                default:
-                Debug.LogError($"Invalid Item ID at {x}");
-                InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("error");
-                    break;
-            }
+            InvSlots[x].transform.GetComponent<Image>().sprite = Resources.Load<Sprite>(Inv[x].ToString());
         }
     }
 
@@ -61,7 +48,7 @@ public class PlayerInventory : MonoBehaviour
         //Debug.Log(col.gameObject.name);
         if (item.tag == "DroppedItem")
         {
-            ItemList.Items i = (ItemList.Items) Convert.ToInt32(item.name);
+            ItemList.Items i = (ItemList.Items) Convert.ToInt32(item.transform.position.z);
             if (AnyInvSlot(i))
             {
                 Destroy(item);
@@ -70,9 +57,14 @@ public class PlayerInventory : MonoBehaviour
             else Debug.LogWarning("inventory full");
         }
     }
+    public void ClickInvSlot(int slot)
+    {
+        InvToCursor(slot);
+        CursorObject.transform.GetChild(1).transform.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Cursor.ToString());
+    }
     public bool AnyInvSlot(ItemList.Items i)
     {
-        for (var x = 0; x < 3; x++)
+        for (var x = 0; x < 9; x++)
         {
             if (AddItem(x,i))
             {

@@ -36,9 +36,12 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (enemyHP <= 0)
         {
+            var i = Instantiate(Loot);
+            i.transform.position = gameObject.transform.position;
+            i.transform.position = 
+            new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,Loot.transform.position.z);
             Destroy(gameObject);
         }
     }
