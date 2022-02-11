@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class NPCscript : MonoBehaviour
 {
-    public GameObject TestButton;
+    public GameObject TalkText;
+
+    bool inRange;
 
     void Start()
     {
-        TestButton.SetActive(false);
+        TalkText.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (inRange)
         {
-            FindObjectOfType<TextBoxManager>().ActivateTextBox();
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                FindObjectOfType<TextBoxManager>().ActivateTextBox();
+                TalkText.SetActive(false);
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
         {
-            TestButton.SetActive(true);
+            TalkText.SetActive(true);
+            inRange = true;
         }
     }
 
@@ -30,7 +37,8 @@ public class NPCscript : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            TestButton.SetActive(false);
+            TalkText.SetActive(false);
+            inRange = false;
         }
     }
 }
