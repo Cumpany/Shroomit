@@ -54,7 +54,7 @@ public class PlayerScript : MonoBehaviour
         {
             aFrames--;
         }
-        if (aFrames == 1)
+        if (aFrames == 20)
         {
             AttackHitbox.transform.position = new Vector3(0,0,0);
         }
