@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     [SerializeField] private GameObject Loot;
+    [SerializeField] private GameObject Loot2;
     public GameObject target;
 
     public float enemyHP = 10;
@@ -38,10 +39,20 @@ public class EnemyScript : MonoBehaviour
     {
         if (enemyHP <= 0)
         {
-            var i = Instantiate(Loot);
-            i.transform.position = gameObject.transform.position;
-            i.transform.position = 
-            new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,Loot.transform.position.z);
+            if (Loot != null)
+            {
+                var i = Instantiate(Loot);
+                i.transform.position = gameObject.transform.position;
+                i.transform.position = 
+                new Vector3(gameObject.transform.position.x-0.1f,gameObject.transform.position.y-0.1f,Loot.transform.position.z);
+            }
+            if (Loot2 != null)
+            {
+                var j = Instantiate(Loot2);
+                j.transform.position = gameObject.transform.position;
+                j.transform.position = 
+                new Vector3(gameObject.transform.position.x+0.1f,gameObject.transform.position.y+0.1f,Loot2.transform.position.z);
+            }
             Destroy(gameObject);
         }
     }

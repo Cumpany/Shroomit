@@ -22,15 +22,16 @@ public class PlayerInventory : MonoBehaviour
         }
         if (Cursor != 0)
         {
-            CursorObject.transform.position = Input.mousePosition;
+            CursorObject.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
         else
         {
-            CursorObject.transform.position = new Vector3(0,3,0);
+            CursorObject.transform.position = new Vector3(0,1,0);
         }
     }
     void Start()
     {
+        Cursor = 0;
         DrawInv();
         Inventory.SetActive(false);
     }
@@ -59,8 +60,20 @@ public class PlayerInventory : MonoBehaviour
     }
     public void ClickInvSlot(int slot)
     {
-        InvToCursor(slot);
-        CursorObject.transform.GetChild(1).transform.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Cursor.ToString());
+        if (Inv[slot] == 0)
+        {
+            CursorToInv(slot);
+        }
+        else if (Cursor == 0)
+        {
+            InvToCursor(slot);
+        }
+        else
+        {
+            Debug.Log("Can't");
+            return;
+        }
+        CursorObject.transform.GetChild(0).transform.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Cursor.ToString());
     }
     public bool AnyInvSlot(ItemList.Items i)
     {
@@ -86,19 +99,24 @@ public class PlayerInventory : MonoBehaviour
     }
     public void CursorToInv(int x)
     {
-        if (Cursor != 0 && Inv[x] != 0)
+        if (Cursor != 0 && Inv[x] == 0)
         {
             AddItem(x,Cursor);
             Cursor = 0;
+            DrawInv();
         }
     }
     public void InvToCursor(int x)
     {
-        if (Cursor != 0 && Inv[x] != 0)
+        if (Cursor == 0 && Inv[x] != 0)
         {
             Cursor = Inv[x];
             Inv[x] = 0;
+            Debug.Log("added "+Cursor+" to cursor?");
+            DrawInv();
+            return;
         }
+        Debug.Log("Cursor full?");
     }
     public bool IsSlotFree(int x)
     {
