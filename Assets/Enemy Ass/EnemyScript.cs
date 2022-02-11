@@ -2,20 +2,38 @@ using System.Net.Http.Headers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyScript : MonoBehaviour
 {
     [SerializeField] private GameObject Loot;
     [SerializeField] private GameObject Loot2;
     public GameObject target;
-
-    public float enemyHP = 10;
+    public float maxEnemyHP = 10f;
+    public float enemyHP = 10f;
     private float iFrames = 0;
 
-    // Start is called before the first frame update
+    private GameObject HpBar;
     void Start()
     {
-
+        HpBar = this.transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
+    }
+    void DrawHP()
+    {
+        var healthBarImage = HpBar.GetComponent<Image>();
+        healthBarImage.fillAmount = Mathf.Clamp(enemyHP / maxEnemyHP, 0, 1f);
+        if (enemyHP <= 2.5)
+        {
+            healthBarImage.color = Color.red;
+        }
+        else if (enemyHP <= 5)
+        {
+            healthBarImage.color = Color.yellow;
+        }
+        else
+        {
+            healthBarImage.color = Color.green;
+        }
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -24,6 +42,7 @@ public class EnemyScript : MonoBehaviour
             iFrames = 30;
             Debug.Log("Enemy damage" + PlayerScript.PlayerDamage);
             enemyHP -= PlayerScript.PlayerDamage;
+            DrawHP();
         }
     }
     void FixedUpdate()
