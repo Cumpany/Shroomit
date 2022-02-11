@@ -10,6 +10,14 @@ public class NPCscript : MonoBehaviour
     {
         TestButton.SetActive(false);
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            FindObjectOfType<TextBoxManager>().ActivateTextBox();
+        }
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
