@@ -6,9 +6,11 @@ public class PlayerFollow : MonoBehaviour
 {
     public Transform myTarget;
     // Start is called before the first frame update
+    public AudioSource LobbyMusic;
     void Start()
     {
-
+        LobbyMusic.loop = true;
+        LobbyMusic.Play();
     }
 
     // Update is called once per frame
