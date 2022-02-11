@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TextBoxManager : MonoBehaviour
 {
     public GameObject textBox;
+    public GameObject TalkText;
 
     public Text theText;
 
@@ -48,6 +49,7 @@ public class TextBoxManager : MonoBehaviour
         if (currentLine > textLines.Length - 1)
         {
             textBox.SetActive(false);
+            TalkText.SetActive(true);
             currentLine = 0;
         }
     }

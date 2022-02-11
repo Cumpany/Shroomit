@@ -29098,10 +29098,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -29263,7 +29263,7 @@ GameObject:
   - component: {fileID: 1233157335}
   - component: {fileID: 1233157334}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29360,6 +29360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 1598132084}
+  TalkText: {fileID: 1233157332}
   theText: {fileID: 2081340685}
   textFile: {fileID: 4900000, guid: dbb4a10990551f849a29556cd975dfed, type: 3}
   textLines: []
