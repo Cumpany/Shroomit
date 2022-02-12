@@ -29622,7 +29622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1546703176
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29928,6 +29928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1787984603}
   - component: {fileID: 1787984602}
+  - component: {fileID: 1787984604}
   m_Layer: 0
   m_Name: MapBounds
   m_TagString: Untagged
@@ -30029,6 +30030,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1787984604
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787984601}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 14.394188, y: 10.567121}
+  - {x: 18.284101, y: 10.666381}
+  - {x: 18.437016, y: 13.542739}
+  - {x: 21.213816, y: 13.661467}
+  - {x: 21.4124, y: 16.538334}
+  - {x: 24.441412, y: 16.77726}
+  - {x: 24.797998, y: 22.271969}
+  - {x: 14.225314, y: 22.352505}
+  - {x: 14.392218, y: 10.575833}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1792413420
 GameObject:
   m_ObjectHideFlags: 0
