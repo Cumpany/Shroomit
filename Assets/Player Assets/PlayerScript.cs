@@ -41,6 +41,10 @@ public class PlayerScript : MonoBehaviour
         {
             Attack();
         }
+        else
+        {
+            animator.SetBool("IsAttacking", false);
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
@@ -66,6 +70,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (aFrames == 0)
         {
+            animator.SetBool("IsAttacking", true);
             switch (Movement.Direction)
             {
                 case 1:
@@ -84,9 +89,9 @@ public class PlayerScript : MonoBehaviour
                 Debug.LogError("Somethings wrong, i can feel it");
                     break;
             }
-            
             AttackHitbox.transform.localPosition = 
             GameObject.FindGameObjectWithTag("Player").transform.position + a;
+
             aFrames = 30;
         }
     }

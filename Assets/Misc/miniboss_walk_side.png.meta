@@ -106,10 +106,10 @@ TextureImporter:
       name: miniboss_walk_side_0
       rect:
         serializedVersion: 2
-        x: 51
-        y: 1101
-        width: 905
-        height: 675
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,10 +127,10 @@ TextureImporter:
       name: miniboss_walk_side_1
       rect:
         serializedVersion: 2
-        x: 1090
-        y: 1110
-        width: 730
-        height: 755
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,10 +148,10 @@ TextureImporter:
       name: miniboss_walk_side_2
       rect:
         serializedVersion: 2
-        x: 74
-        y: 97
-        width: 879
-        height: 626
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: miniboss_walk_side_3
       rect:
         serializedVersion: 2
-        x: 1094
-        y: 86
-        width: 768
-        height: 799
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

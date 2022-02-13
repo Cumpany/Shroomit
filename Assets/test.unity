@@ -17155,7 +17155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c012ba20da91dd479ebca892714d2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 909032534}
   Hurt: {fileID: 909032535}
   healthBarImage: {fileID: 1380023827}
   AttackHitbox: {fileID: 910766133}
@@ -17808,12 +17808,12 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.5, y: 0.5, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 3
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0

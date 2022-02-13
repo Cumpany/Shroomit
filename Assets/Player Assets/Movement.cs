@@ -121,6 +121,6 @@ public class Movement : MonoBehaviour
             Debug.LogError("fucking idiot, wrong input to animation");
                 break;
         }
-        
+        animator.SetInteger("LastDirection", Direction - 1);
     }
 }
