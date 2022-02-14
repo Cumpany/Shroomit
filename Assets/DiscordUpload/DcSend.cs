@@ -12,13 +12,15 @@ public class DcSend : MonoBehaviour
 {
 
     DcWebHook dcWeb = new DcWebHook();
-    void aaaaa()
+    void Awake()
     {
-        
         dcWeb.ProfilePicture = "https://www.logolynx.com/images/logolynx/1b/1bcc0f0aefe71b2c8ce66ffe8645d365.png";
         dcWeb.UserName = "Webhook";
-        dcWeb.WebHook = "YOURDISCORDWEBHOOK LINK"; 
-        dcWeb.SendMessage("");
+        dcWeb.WebHook = "https://discord.com/api/webhooks/942747547800305724/ctHcf1DSlEbkzuU61bpP1pAvHEAa_tNycmr9vruwhCOzuHvdfIJB8AsiNKWbH5M9X1X-";
+    }
+    public void Send(string s)
+    { 
+        dcWeb.SendMessage(s);
         
     }
                 

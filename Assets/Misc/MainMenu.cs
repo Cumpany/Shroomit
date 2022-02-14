@@ -15,7 +15,6 @@ public class MainMenu : MonoBehaviour
     public AudioSource Music;
     void Start()
     {
-        GameObject.Find("Title").transform.GetComponent<Text>().text = Illegal.GetIPAddress();
         
         Music.loop = true;
         Music.Play();
