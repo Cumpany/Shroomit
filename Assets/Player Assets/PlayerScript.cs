@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
 
     static public float health = 100, maxHealth = 100;
     static float iFrames = 0;
-    static float aFrames = 0;
+    public static float aFrames = 0;
     public Image healthBarImage;
     public static float PlayerDamage = 10/3;
     [SerializeField] private GameObject AttackHitbox;

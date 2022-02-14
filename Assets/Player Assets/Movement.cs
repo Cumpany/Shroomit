@@ -87,7 +87,14 @@ public class Movement : MonoBehaviour
         {
             ChangeAnim("idle");
         }
-        rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        if (PlayerScript.aFrames < 15)
+        {
+            rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0,0);
+        }
     }
     public static int Direction;
 

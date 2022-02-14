@@ -29523,7 +29523,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Continue
+  m_Text: Continue (Space)
 --- !u!222 &1206662634
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29735,7 +29735,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press Enter to speak
+  m_Text: Press F to speak
 --- !u!222 &1233157335
 CanvasRenderer:
   m_ObjectHideFlags: 0

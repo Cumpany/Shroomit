@@ -5,8 +5,9 @@ using UnityEngine;
 public class NPCscript : MonoBehaviour
 {
     public GameObject TalkText;
+    public static bool TextActive;
 
-    bool inRange;
+    public static bool inRange;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class NPCscript : MonoBehaviour
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 FindObjectOfType<TextBoxManager>().ActivateTextBox();
                 TalkText.SetActive(false);

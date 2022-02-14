@@ -41,6 +41,12 @@ public class TextBoxManager : MonoBehaviour
     {
         theText.text = textLines[currentLine];
     }
+    void LateUpdate() {
+        if (Input.GetKeyDown(KeyCode.Space) && textBox.activeSelf)
+        {
+            CurrentLineUpdate();
+        }
+    }
 
     public void CurrentLineUpdate()
     {
