@@ -109,12 +109,12 @@ TextureImporter:
       name: main_cha_walk_twords_camera_0
       rect:
         serializedVersion: 2
-        x: 184
-        y: 1058
-        width: 665
-        height: 894
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,12 +130,12 @@ TextureImporter:
       name: main_cha_walk_twords_camera_2
       rect:
         serializedVersion: 2
-        x: 1223
-        y: 1101
-        width: 661
-        height: 841
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: main_cha_walk_twords_camera_3
       rect:
         serializedVersion: 2
-        x: 184
-        y: 34
-        width: 665
-        height: 894
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,22 +169,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_cha_walk_twords_camera_4
+      name: main_cha_walk_twords_camera_1
       rect:
         serializedVersion: 2
-        x: 1223
-        y: 77
-        width: 661
-        height: 841
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 530dac87c01980990800000000000000
-      internalID: -7419520903340699595
+      spriteID: eba6e02afe38293a0800000000000000
+      internalID: -6660115833688266050
       vertices: []
       indices: 
       edges: []
