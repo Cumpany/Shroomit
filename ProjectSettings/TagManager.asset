@@ -10,6 +10,7 @@ TagManager:
   - Inventory
   - InvSlot
   - AttackHitbox
+  - Shop
   layers:
   - Default
   - TransparentFX
