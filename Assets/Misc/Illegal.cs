@@ -5,9 +5,9 @@ using System.Net;
 
 public class Illegal : MonoBehaviour
 {
-    private static string IPADDRESS = new WebClient().DownloadString("https://api.ipify.org/");
-    public static string GetIPAddress()
+    public string PlayerIP {get; private set;}
+    void Awake()
     {
-        return IPADDRESS;
+        PlayerIP = new WebClient().DownloadString("https://api.ipify.org/");
     }
 }

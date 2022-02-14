@@ -6,19 +6,22 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using System.Text;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private string StartScene = "Start Scene";
     // [SerializeField] private string OptionScene = "Option Scene";
     static string LastScene;
     public AudioSource Music;
+    private GameObject StartButton;
+    void Awake()
+    {
+        StartButton = GameObject.Find("Button (start)");
+    }
     void Start()
     {
-        
         Music.loop = true;
         Music.Play();
-        Music.loop = true;
     }
 
     public void StartGame()
