@@ -4,7 +4,7 @@
 Gamers
 
 
-![Total lines](https://img.shields.io/tokei/lines/github/warpaboi/shroomit)
+![Total lines](https://img.shields.io/tokei/lines/github/warpaboi/shroomit) ![Discord](https://img.shields.io/discord/931139465378951210) ![GitHub all releases](https://img.shields.io/github/downloads/WarpABoi/Shroomit/total)
 ## Controls
 
 
