@@ -21,6 +21,11 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private GameObject AttackHitbox;
     void Start()
     {
+        if (SaveManager.IsSaveFile())
+        {
+            var e = new SaveManager();
+            e.Load();
+        }
         // Debug.Log($"{Screen.width} {Screen.height}");
         if ((float)((float)Screen.width / (float)Screen.height) > 1.75f && (float)((float)Screen.width / (float)Screen.height) < 1.8f)
         {
@@ -48,6 +53,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            SaveManager.Save();
             SceneManager.LoadScene("Main menu");
         }
     }

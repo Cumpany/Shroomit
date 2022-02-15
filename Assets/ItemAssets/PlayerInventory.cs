@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public ItemList.Items[] Inv = new ItemList.Items[9];
-    public ItemList.Items Cursor = new ItemList.Items();
+    public static ItemList.Items[] Inv = new ItemList.Items[9];
+    public static ItemList.Items Cursor = new ItemList.Items();
     [SerializeField] private GameObject CursorObject;
     [SerializeField] private GameObject Inventory;
     [SerializeField] private GameObject[] InvSlots = new GameObject[9];
