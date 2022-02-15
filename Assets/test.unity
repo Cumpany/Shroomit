@@ -21665,8 +21665,8 @@ Tilemap:
   - first: {x: 8, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 23
-      m_TileSpriteIndex: 23
+      m_TileIndex: 22
+      m_TileSpriteIndex: 22
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -22805,8 +22805,8 @@ Tilemap:
   - first: {x: 2, y: 10, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 25
-      m_TileSpriteIndex: 25
+      m_TileIndex: 14
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -29122,7 +29122,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 0ea26e88cc42d14428c8f8d43015579f, type: 2}
-  - m_RefCount: 21
+  - m_RefCount: 22
     m_Data: {fileID: 11400000, guid: 37a5b64b8245cb940825cf279fa75f16, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 5a00395ea4c13044aaf7741091c23052, type: 2}
@@ -29138,13 +29138,13 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 3dfe32884aece484890e68e2dcab47c1, type: 2}
   - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: 3ee1806f8e9f919498d29afdb81b0a4f, type: 2}
-  - m_RefCount: 81
+  - m_RefCount: 82
     m_Data: {fileID: 11400000, guid: 63c1a4afde14fea4bbffea4952f6d23f, type: 2}
-  - m_RefCount: 15
+  - m_RefCount: 14
     m_Data: {fileID: 11400000, guid: eec4950cb8fb2d946ae3590a616af439, type: 2}
   - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: c1cfbef3f87c43e4bbc579b256a64321, type: 2}
-  - m_RefCount: 93
+  - m_RefCount: 92
     m_Data: {fileID: 11400000, guid: 4a2e6888b4ee94f4097329d06846a8d1, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: b9ec4b1e52cc3584ba1c6f3a55a3e198, type: 2}
@@ -29179,7 +29179,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 649248c1f2bac904784e20d253e4c088, type: 3}
-  - m_RefCount: 21
+  - m_RefCount: 22
     m_Data: {fileID: 21300000, guid: 8df9af049c4f42946876a26dcfc31147, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: f05176a96de79a144b0c8f43eae5a763, type: 3}
@@ -29195,13 +29195,13 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 0a60bf9395fa8414091546a4f32c520b, type: 3}
   - m_RefCount: 16
     m_Data: {fileID: 21300000, guid: a8d16043818e46241854f3c1c2890cc5, type: 3}
-  - m_RefCount: 81
+  - m_RefCount: 82
     m_Data: {fileID: 21300000, guid: 1a87313de6fc44e4fb9ecb956328340a, type: 3}
-  - m_RefCount: 15
+  - m_RefCount: 14
     m_Data: {fileID: 21300000, guid: 371a37a154e78a14fa33e757ceee740d, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: 21300000, guid: 1e85011505933844b8fca78e9754e7b6, type: 3}
-  - m_RefCount: 93
+  - m_RefCount: 92
     m_Data: {fileID: 21300000, guid: 1c12a7c9349c6ef41996e3f325c4ee17, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 21300000, guid: b7035f129cba55b4b93fee569427684d, type: 3}
@@ -66607,7 +66607,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 7.2, y: 0.7}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1380023827
 MonoBehaviour:
@@ -66629,14 +66629,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 91b3ccc78662d71489f3d725f05e92f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6fcf601f163fa5d40a650bab116ce91f, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1380023828
@@ -66673,7 +66673,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437586688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.1}
+  m_LocalPosition: {x: 0, y: 0, z: 12.95}
   m_LocalScale: {x: 1, y: 1, z: -913.16}
   m_Children:
   - {fileID: 1380023826}
@@ -66682,8 +66682,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7, y: -5.5}
-  m_SizeDelta: {x: 7.5, y: 1}
+  m_AnchoredPosition: {x: 8.53, y: 3.7}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1437586690
 MonoBehaviour:
@@ -66698,14 +66698,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a780ee056c103d246a58fe0b1fcd3597, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

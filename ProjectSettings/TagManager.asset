@@ -12,6 +12,7 @@ TagManager:
   - AttackHitbox
   - Shop
   - mapBounds
+  - Barrier
   layers:
   - Default
   - TransparentFX

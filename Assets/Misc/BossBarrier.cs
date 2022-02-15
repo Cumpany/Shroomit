@@ -6,10 +6,12 @@ public class BossBarrier : MonoBehaviour
 {
     public GameObject BossTextManager;
     public GameObject Barrier;
+    public static GameObject Bar;
     // Start is called before the first frame update
     void Start()
     {
         Barrier.SetActive(false);
+        Bar = Barrier;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -19,6 +21,7 @@ public class BossBarrier : MonoBehaviour
             BossTextManager.SetActive(true);
             //FindObjectOfType<BossTextManager>().ActivateTextBox();
             Barrier.SetActive(true);
+            Bar = Barrier;
             this.gameObject.SetActive(false);
         }
     }
