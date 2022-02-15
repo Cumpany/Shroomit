@@ -112,7 +112,7 @@ public class PlayerScript : MonoBehaviour
             UpdateHealthBar();
             if (health <= 0)
             {
-                Application.Quit(69420);
+                SceneManager.LoadScene("Main Menu");
             }
             iFrames = 30; // time between being able to take damage
         }
