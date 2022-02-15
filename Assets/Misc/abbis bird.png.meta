@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 296859862d76e5d46ad70c0c53f98142
+guid: 3260369a9ba7ca640b168ea07ce58719
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -734421948117538538
-    second: player_walk_left_0
+      213: -167473368877331828
+    second: abbis bird_0
   - first:
-      213: -7444602644379781646
-    second: player_walk_left_1
-  - first:
-      213: -8577064763936714601
-    second: player_walk_left_2
-  - first:
-      213: 8862705642088948780
-    second: player_walk_left_3
+      213: -2543442331172344772
+    second: abbis bird_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_walk_left_0
+      name: abbis bird_0
       rect:
         serializedVersion: 2
-        x: 219
-        y: 1273
-        width: 550
-        height: 638
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 619243b112fcec5f0800000000000000
-      internalID: -734421948117538538
+      spriteID: c8a8ababbd30dadf0800000000000000
+      internalID: -167473368877331828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_walk_left_1
+      name: abbis bird_1
       rect:
         serializedVersion: 2
-        x: 1215
-        y: 1275
-        width: 578
-        height: 617
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,50 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f53fcf86557fa890800000000000000
-      internalID: -7444602644379781646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_walk_left_2
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 235
-        width: 570
-        height: 633
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 790580a5a0528f880800000000000000
-      internalID: -8577064763936714601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_walk_left_3
-      rect:
-        serializedVersion: 2
-        x: 1215
-        y: 251
-        width: 578
-        height: 617
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c24ef8923d7aefa70800000000000000
-      internalID: 8862705642088948780
+      spriteID: c3ce7cfeca0e3bcd0800000000000000
+      internalID: -2543442331172344772
       vertices: []
       indices: 
       edges: []
