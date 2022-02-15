@@ -52,7 +52,6 @@ public class SaveManager : MonoBehaviour
         int j = 0;
         foreach (var item in GameObject.FindGameObjectsWithTag("Enemy"))
         {
-            var k = new EnemyScript();
             var Enemy = new EnemySave 
             {
                 Index = j,
@@ -88,8 +87,13 @@ public class SaveManager : MonoBehaviour
         };
         File.WriteAllText("Index.sav",JsonConvert.SerializeObject(SIndex));
     }
-    [SerializeField] private GameObject EnemyPrefab;
-    [SerializeField] private GameObject ItemPrefab;
+    private GameObject EnemyPrefab;
+    private GameObject ItemPrefab;
+    void Awake()
+    {
+        EnemyPrefab = Resources.Load("enemy", typeof(GameObject)) as GameObject;
+        ItemPrefab = Resources.Load("ItemPrefab", typeof(GameObject)) as GameObject;
+    }
     public static void StaticLoad()
     {
         var l = Camera.main.gameObject.AddComponent<SaveManager>();
@@ -118,24 +122,29 @@ public class SaveManager : MonoBehaviour
 
         int Enemies = JsonConvert.DeserializeObject<SaveIndex>(File.ReadAllText("Index.sav")).Enemies;
         int Items = JsonConvert.DeserializeObject<SaveIndex>(File.ReadAllText("Index.sav")).Items;
-        for (var i = 0; i < Enemies; i++)
+        if (Enemies > 0)
         {
-            var h = JsonConvert.DeserializeObject<EnemySave>(File.ReadAllText($"Enemy{i}.sav"));
-            var k = new Vector3(h.XPos,h.YPos,0);
-            var j = Instantiate(EnemyPrefab);
-            j.transform.position = k;
-            j.GetComponent<EnemyScript>().enemyHP = h.HP;
+            for (var i = 0; i < Enemies; i++)
+            {
+                var h = JsonConvert.DeserializeObject<EnemySave>(File.ReadAllText($"Enemy{i}.sav"));
+                var k = new Vector3(h.XPos,h.YPos,0);
+                var j = Instantiate(EnemyPrefab);
+                j.transform.position = k;
+                j.GetComponent<EnemyScript>().enemyHP = h.HP;
+            }
         }
 
-
-        for (var i = 0; i < Items; i++)
+        if (Items > 0)
         {
-            var h = JsonConvert.DeserializeObject<ItemSave>(File.ReadAllText($"Item{i}.sav"));
-            var k = new Vector3(h.XPos,h.YPos,(int)h.Item);
-            var j = Instantiate(ItemPrefab);
-            j.transform.position = k;
-            j.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = 
-            Resources.Load<Sprite>(h.Item.ToString());
+            for (var i = 0; i < Items; i++)
+            {
+                var h = JsonConvert.DeserializeObject<ItemSave>(File.ReadAllText($"Item{i}.sav"));
+                var k = new Vector3(h.XPos,h.YPos,(int)h.Item);
+                var j = Instantiate(ItemPrefab);
+                j.transform.position = k;
+                j.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = 
+                Resources.Load<Sprite>(h.Item.ToString());
+            }
         }
     }
     public static bool IsSaveFile()
