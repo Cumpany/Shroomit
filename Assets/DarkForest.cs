@@ -15,13 +15,19 @@ public class DarkForest : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D col)
     {
         // fades the image out when you click
-        StartCoroutine(FadeImage(true));
+        if (col.gameObject.tag == "Player")
+        {
+            StartCoroutine(FadeImage(false));
+        }
     }
 
     public void OnTriggerExit2D(Collider2D col)
     {
         // fades the image out when you click
-        StartCoroutine(FadeImage(false));
+        if (col.gameObject.tag == "Player")
+        {
+            StartCoroutine(FadeImage(true));
+        }  
     }
 
     IEnumerator FadeImage(bool fadeAway)
