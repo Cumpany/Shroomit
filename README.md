@@ -1,8 +1,6 @@
 # Shroomit
 
 
-Gamers
-
 
 ![Total lines](https://img.shields.io/tokei/lines/github/warpaboi/shroomit) ![Discord](https://img.shields.io/discord/931139465378951210) ![GitHub all releases](https://img.shields.io/github/downloads/WarpABoi/Shroomit/total)
 ## Controls
@@ -14,14 +12,13 @@ Gamers
 | inventory     | Tab/I         |
 | Interact      | F             |
 | Attack        | LMB           |
+| Pause         | Escape        |
 | Exit Game     | Alt+F4        |
 | Easteregg     | K*32767       |
 | L             | Death         |
-| Placeholder   | Placeholder   |
 
 
 ## License
----
 MIT License
 
 Copyright (c) 2022 Warp
