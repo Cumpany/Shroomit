@@ -53,7 +53,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SaveManager.Save();
-            SceneManager.LoadScene("Main menu");
+            SceneManager.LoadScene("MainMenu");
         }
     }
     void FixedUpdate()

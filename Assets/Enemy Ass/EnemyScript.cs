@@ -17,6 +17,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         HpBar = this.transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
+        DrawHP();
     }
     void DrawHP()
     {

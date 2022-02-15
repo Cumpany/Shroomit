@@ -32,6 +32,10 @@ public class SaveIndex
     public int Enemies {get; set;}
     public int Items {get; set;}
 }
+public class SaveOther
+{
+    public bool BossBarrier {get; set;}
+}
 public class SaveManager : MonoBehaviour
 {
     public static void Save()
@@ -86,6 +90,14 @@ public class SaveManager : MonoBehaviour
             Items = h
         };
         File.WriteAllText("Index.sav",JsonConvert.SerializeObject(SIndex));
+
+
+        var OtherSave = new SaveOther
+        {
+            BossBarrier = BossBarrier.Bar.activeSelf
+        };
+        File.WriteAllText("Other.sav",JsonConvert.SerializeObject(OtherSave));
+        
     }
     private GameObject EnemyPrefab;
     private GameObject ItemPrefab;
@@ -146,6 +158,9 @@ public class SaveManager : MonoBehaviour
                 Resources.Load<Sprite>(h.Item.ToString());
             }
         }
+        var g = JsonConvert.DeserializeObject<SaveOther>(File.ReadAllText("Other.sav"));
+        GameObject.Find("Bossbarrier").SetActive(g.BossBarrier);
+
     }
     public static bool IsSaveFile()
     {
@@ -165,5 +180,3 @@ public class SaveManager : MonoBehaviour
         }
     }
 }
-
-// haha 69
