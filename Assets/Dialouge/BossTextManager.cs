@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextBoxManager : MonoBehaviour
+public class BossTextManager : MonoBehaviour
 {
     public GameObject textBox;
 
@@ -40,7 +40,8 @@ public class TextBoxManager : MonoBehaviour
     {
         theText.text = textLines[currentLine];
     }
-    void LateUpdate() {
+    void LateUpdate()
+    {
         if (Input.GetKeyDown(KeyCode.Space) && textBox.activeSelf)
         {
             CurrentLineUpdate();

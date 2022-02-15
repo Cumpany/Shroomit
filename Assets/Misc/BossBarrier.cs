@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossBarrier : MonoBehaviour
 {
-
+    public GameObject BossTextManager;
     public GameObject Barrier;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,10 @@ public class BossBarrier : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            BossTextManager.SetActive(true);
+            //FindObjectOfType<BossTextManager>().ActivateTextBox();
             Barrier.SetActive(true);
+            this.gameObject.SetActive(false);
         }
     }
 }
