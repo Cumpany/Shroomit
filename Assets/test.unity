@@ -17885,7 +17885,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1766641673}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextBoxManager, Assembly-CSharp
         m_MethodName: CurrentLineUpdate
         m_Mode: 1
@@ -33188,6 +33188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf18f4357d3c9164394b9257bab58ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  talkText: {fileID: 503125314}
   textBox: {fileID: 296934896}
   theText: {fileID: 342653944}
   textFile: {fileID: 4900000, guid: dbb4a10990551f849a29556cd975dfed, type: 3}
@@ -34108,7 +34109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1766641672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf18f4357d3c9164394b9257bab58ff7, type: 3}
+  m_Script: {fileID: 11500000, guid: 82fe70b48fd6bd1479f3a807ae42f291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 889095628}
