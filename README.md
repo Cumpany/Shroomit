@@ -4,7 +4,7 @@
 Gamers
 
 
-![Total lines](https://img.shields.io/tokei/lines/github/warpaboi/profilvecka1)
+![Total lines](https://img.shields.io/tokei/lines/github/warpaboi/shroomit)
 ## Controls
 
 
