@@ -23,8 +23,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (SaveManager.IsSaveFile())
         {
-            var e = new SaveManager();
-            e.Load();
+            SaveManager.StaticLoad();
         }
         // Debug.Log($"{Screen.width} {Screen.height}");
         if ((float)((float)Screen.width / (float)Screen.height) > 1.75f && (float)((float)Screen.width / (float)Screen.height) < 1.8f)

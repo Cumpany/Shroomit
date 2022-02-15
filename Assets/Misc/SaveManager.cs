@@ -90,6 +90,11 @@ public class SaveManager : MonoBehaviour
     }
     [SerializeField] private GameObject EnemyPrefab;
     [SerializeField] private GameObject ItemPrefab;
+    public static void StaticLoad()
+    {
+        var l = Camera.main.gameObject.AddComponent<SaveManager>();
+        l.Load();
+    }
     public void Load()
     {
         var eDeletion = GameObject.FindGameObjectsWithTag("Enemy");
@@ -143,10 +148,11 @@ public class SaveManager : MonoBehaviour
     }
     public void DeleteSave()
     {
-        var i = Directory.GetFiles("", "*.sav");
+        var i = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.sav");
         for (var j = 0; j < i.Length; j++)
         {
-            Directory.Delete(i[j]);
+            Debug.Log(i[j]);
+            File.Delete(i[j]);
         }
     }
 }
