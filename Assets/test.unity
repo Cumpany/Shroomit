@@ -34432,9 +34432,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 342202568295172887, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
+      propertyPath: m_Size.x
+      value: 6.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 342202568295172887, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
+      propertyPath: m_Size.y
+      value: 8.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 342202568295172887, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1570714161131774061, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
       propertyPath: m_Name
       value: 3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768849350257371168, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768849350257371168, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4051915353382328875, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
       propertyPath: m_RootOrder
