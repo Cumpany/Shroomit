@@ -54,4 +54,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("EndCredits");
     }
+    public static string PlayerName;
+    public void SetName(string s)
+    {
+        PlayerName = s;
+    }
 }

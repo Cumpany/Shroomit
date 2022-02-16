@@ -58,8 +58,13 @@ public class boss : MonoBehaviour
         if (enemyHP <= 0)
         {
             var d = new DcSend();
-            d.Send($"{(TimerScript.Timer/50).ToString()} achieved by {Illegal.PlayerIP}");
+            d.Send($"{(TimerScript.Timer/50).ToString()} achieved by {MainMenu.PlayerName}");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            var d = new DcSend();
+            d.Send($"{(TimerScript.Timer/50).ToString()} achieved by {MainMenu.PlayerName}");
         }
     }
     void FixedUpdate()
