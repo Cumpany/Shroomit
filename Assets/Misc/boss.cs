@@ -46,12 +46,14 @@ public class boss : MonoBehaviour
     float vertical;
     void Update()
     {
+        Debug.Log(iFrames);
         horizontal = rb.velocity.x;
         vertical = rb.velocity.y;
         if (enemyHP >= 0)
         {
             Destroy(this);
         }
+        Debug.Log("test");
     }
     void FixedUpdate()
     {

@@ -29313,10 +29313,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 7482667652216324306, guid: 91b3ccc78662d71489f3d725f05e92f9, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -29855,6 +29855,7 @@ MonoBehaviour:
   player: {fileID: 909032526}
   BossTextManager: {fileID: 889095628}
   Barrier: {fileID: 395427024}
+  BossHealth: {fileID: 1474746370}
 --- !u!61 &264824505
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31458,6 +31459,7 @@ GameObject:
   - component: {fileID: 739190744}
   - component: {fileID: 739190743}
   - component: {fileID: 739190742}
+  - component: {fileID: 739190747}
   m_Layer: 0
   m_Name: boss
   m_TagString: Untagged
@@ -31596,6 +31598,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &739190747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739190741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67812f0ceebe4974181eae24ad5f231f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemyHP: 50
+  enemyHP: 50
+  HpBar: {fileID: 30785864}
+  animator: {fileID: 739190742}
 --- !u!1 &742498999
 GameObject:
   m_ObjectHideFlags: 0
@@ -67008,7 +67026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1474746371
 Transform:
   m_ObjectHideFlags: 0
