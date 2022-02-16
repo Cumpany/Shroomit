@@ -66442,7 +66442,7 @@ MonoBehaviour:
   textLines: []
   currentLine: 0
   endAtLine: 0
-  player: {fileID: 0}
+  player: {fileID: 909032531}
 --- !u!4 &1260999354
 Transform:
   m_ObjectHideFlags: 0
@@ -67365,7 +67365,7 @@ MonoBehaviour:
   textLines: []
   currentLine: 0
   endAtLine: 0
-  player: {fileID: 0}
+  player: {fileID: 909032531}
 --- !u!4 &1766641674
 Transform:
   m_ObjectHideFlags: 0
