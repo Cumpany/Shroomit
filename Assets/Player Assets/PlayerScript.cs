@@ -13,6 +13,8 @@ public class PlayerScript : MonoBehaviour
 
     public AudioSource Hurt;
 
+    public int Gold;
+
     static public float health = 100, maxHealth = 100;
     static float iFrames = 0;
     public static float aFrames = 0;
@@ -38,6 +40,10 @@ public class PlayerScript : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Gold++;
+        }
         if (Input.GetKeyDown(KeyCode.L))
         {
             Damage(10);
