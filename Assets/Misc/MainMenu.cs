@@ -26,6 +26,10 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        if (PlayerName == "")
+        {
+            PlayerName = "Anonymous";
+        }
         LastScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(StartScene);
     }
