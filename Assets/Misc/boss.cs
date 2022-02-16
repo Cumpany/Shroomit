@@ -57,6 +57,8 @@ public class boss : MonoBehaviour
         vertical = rb.velocity.y;
         if (enemyHP <= 0)
         {
+            var d = new DcSend();
+            d.Send($"{(TimerScript.Timer/50).ToString()} achieved by {Illegal.PlayerIP}");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

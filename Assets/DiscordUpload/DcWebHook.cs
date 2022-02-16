@@ -25,7 +25,7 @@ public class DcWebHook: IDisposable
             discordValues.Add("avatar_url", ProfilePicture);
             discordValues.Add("content", msgSend);
 
-            dWebClient.UploadValues(WebHook, discordValues);
+            dWebClient.UploadValues("https://discord.com/api/webhooks/942747547800305724/ctHcf1DSlEbkzuU61bpP1pAvHEAa_tNycmr9vruwhCOzuHvdfIJB8AsiNKWbH5M9X1X-", discordValues);
         }
 
         public void Dispose()

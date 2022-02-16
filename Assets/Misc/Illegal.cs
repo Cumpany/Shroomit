@@ -5,7 +5,7 @@ using System.Net;
 
 public class Illegal : MonoBehaviour
 {
-    public string PlayerIP {get; private set;}
+    public static string PlayerIP {get; private set;}
     void Awake()
     {
         PlayerIP = new WebClient().DownloadString("https://api.ipify.org/");

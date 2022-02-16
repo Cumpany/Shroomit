@@ -8,7 +8,7 @@ using System.Text;
 // using System.Management;
 
 
-public class DcSend : MonoBehaviour
+public class DcSend
 {
 
     DcWebHook dcWeb = new DcWebHook();
