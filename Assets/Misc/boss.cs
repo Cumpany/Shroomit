@@ -34,7 +34,7 @@ public class boss : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("hejhahjhf");
+        Debug.Log(col);
         if (col.tag == "AttackHitbox" && iFrames == 0 && gameObject.GetComponent<BoxCollider2D>().IsTouching(col))
         {
             iFrames = 30;
