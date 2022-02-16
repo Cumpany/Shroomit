@@ -34,7 +34,8 @@ public class boss : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("hejhahjhf");
+        Debug.Log(col);
+        Debug.Log(col.tag);
         if (col.tag == "AttackHitbox" && iFrames == 0 && gameObject.GetComponent<BoxCollider2D>().IsTouching(col))
         {
             iFrames = 30;
@@ -47,14 +48,12 @@ public class boss : MonoBehaviour
     float vertical;
     void Update()
     {
-        Debug.Log(iFrames);
         horizontal = rb.velocity.x;
         vertical = rb.velocity.y;
         if (enemyHP >= 0)
         {
             Destroy(this);
         }
-        Debug.Log("test");
     }
     void FixedUpdate()
     {
