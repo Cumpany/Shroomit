@@ -74,6 +74,18 @@ public class PlayerScript : MonoBehaviour
     Vector3 a;
     public void Attack()
     {
+        for (var i = 0; i < 9; i++)
+        {
+            if (PlayerInventory.Inv[i] == (ItemList.Items)5)
+            {
+                PlayerDamage = (10/3)*2;
+                break;
+            }
+            else
+            {
+                PlayerDamage = 10/3;
+            }
+        }
         if (aFrames == 0)
         {
             animator.SetBool("IsAttacking", true);

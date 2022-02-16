@@ -59,4 +59,8 @@ public class MainMenu : MonoBehaviour
     {
         PlayerName = s;
     }
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

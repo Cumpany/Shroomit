@@ -37,6 +37,12 @@ public class SaveOther
     public bool BossBarrier {get; set;}
     public float GameTime {get; set;}
 }
+public class SaveBoss
+{
+    public float XPos {get; set;}
+    public float YPos {get; set;}
+    public float BossHP {get; set;}
+}
 public class SaveManager : MonoBehaviour
 {
     public static void Save()
@@ -99,6 +105,15 @@ public class SaveManager : MonoBehaviour
             GameTime = TimerScript.Timer
         };
         File.WriteAllText("Other.sav",JsonConvert.SerializeObject(OtherSave));
+
+        var bos = GameObject.Find("boss");
+        var BossSave = new SaveBoss
+        {
+            XPos = bos.transform.position.x,
+            YPos = bos.transform.position.y,
+            BossHP = boss.enemyHP
+        };
+        File.WriteAllText("Boss.sav",JsonConvert.SerializeObject(BossSave));
         
     }
     private GameObject EnemyPrefab;
@@ -163,6 +178,10 @@ public class SaveManager : MonoBehaviour
         var g = JsonConvert.DeserializeObject<SaveOther>(File.ReadAllText("Other.sav"));
         GameObject.Find("Bossbarrier").SetActive(g.BossBarrier);
         TimerScript.Timer = g.GameTime;
+        var u = JsonConvert.DeserializeObject<SaveBoss>(File.ReadAllText("Boss.sav"));
+        boss.enemyHP = u.BossHP;
+        var bos = GameObject.Find("boss");
+        bos.transform.position = new Vector3(u.XPos,u.YPos,0);
 
     }
     public static bool IsSaveFile()
@@ -182,5 +201,6 @@ public class SaveManager : MonoBehaviour
             Debug.Log(i[j]);
             File.Delete(i[j]);
         }
+        boss.enemyHP = boss.maxEnemyHP;
     }
 }

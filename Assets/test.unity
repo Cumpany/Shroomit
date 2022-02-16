@@ -29879,7 +29879,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 35
+  m_SortingOrder: 7963
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -31675,7 +31675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739190741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.6, y: -1.57, z: 0}
+  m_LocalPosition: {x: -36.7, y: -1.57, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -31693,7 +31693,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67812f0ceebe4974181eae24ad5f231f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemyHP: 50
   HpBar: {fileID: 30785864}
   AttackHitbox: {fileID: 910766134}
   animator: {fileID: 739190742}
@@ -68782,7 +68781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068113847}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.9010706, y: 0.18, z: 17.06}
+  m_LocalPosition: {x: 4.9010706, y: 0.18, z: -46.8}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children:
   - {fileID: 255679477}
