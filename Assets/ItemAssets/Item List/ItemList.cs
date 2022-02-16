@@ -12,6 +12,7 @@ public class ItemList : MonoBehaviour
         // add any items after here
         Apple,
         Banana,
-        Orange
+        Orange,
+        Heal
     }
 }
