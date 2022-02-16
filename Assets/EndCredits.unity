@@ -433,11 +433,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2369b81f28c21e14f9697f64b29886bb, type: 3}
-    m_FontSize: 7
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 104
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -446,72 +446,15 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Credits:
 
-    Grass_tile1 - Ayman Khalaf
+    Grass and tree tiles - Ayman Khalaf
 
-    Grass_tile2 - Ayman Khalaf
+    Enemy, boss, miniboss
+    and player animations - Ida Rikardsdotter
 
-    Grass_tile3
-    - Ayman Khalaf
+    Main menu logo and buttons - Simon
+    Schatz
 
-    Grass_tile4 - Ayman Khalaf
-
-    Grass_tile5 - Ayman Khalaf
-
-    Grass_tile6
-    - Ayman Khalaf
-
-    Grass_tile7 - Ayman Khalaf
-
-    Grass_tile8 - Ayman Khalaf
-
-    Grass_tile9
-    - Ayman Khalaf
-
-    Grass_tile10 - Ayman Khalaf
-
-    Grass_tile11 - Ayman Khalaf
-
-    Grass_tile12
-    - Ayman Khalaf
-
-    Grass_tile13 - Ayman Khalaf
-
-    Grass_tile14 - Ayman Khalaf
-
-    Grass_tile15
-    - Ayman Khalaf
-
-    Grass_tile16 - Ayman Khalaf
-
-    Grass_tile17 - Ayman Khalaf
-
-    Grass_tile18
-    - Ayman Khalaf
-
-    Grass_tile19 - Ayman Khalaf
-
-    Grass_tile20 - Ayman Khalaf
-
-    Grass_tile21
-    - Ayman Khalaf
-
-    Grass_tile22 - Ayman Khalaf
-
-    Grass_tile23 - Ayman Khalaf
-
-    Grass_tile24
-    - Ayman Khalaf
-
-    Grass_tile25 - Ayman Khalaf
-
-    Grass_tile26 - Ayman Khalaf
-
-    Grass_tile27
-    - Ayman Khalaf
-
-    Grass_tile28 - Ayman Khalaf
-
-    Grass_tile29 - Ayman Khalaf'
+'
 --- !u!222 &1992593477
 CanvasRenderer:
   m_ObjectHideFlags: 0
