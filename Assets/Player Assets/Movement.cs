@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour
 
     public float runSpeed = 10.0f;
 
+    public bool CanMove = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (CanMove == false)
+        {
+            return;
+        }
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         // var cHorizontal = rb.velocity.x;

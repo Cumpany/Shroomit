@@ -29852,6 +29852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f0a71542458efa449572721dfd8805f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 909032526}
   BossTextManager: {fileID: 889095628}
   Barrier: {fileID: 395427024}
 --- !u!61 &264824505
@@ -32515,6 +32516,7 @@ MonoBehaviour:
   animator: {fileID: 909032534}
   rb: {fileID: 0}
   runSpeed: 10
+  CanMove: 0
 --- !u!114 &909032532
 MonoBehaviour:
   m_ObjectHideFlags: 0

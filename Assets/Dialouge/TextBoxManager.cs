@@ -23,6 +23,8 @@ public class TextBoxManager : MonoBehaviour
     {
         player = FindObjectOfType<Movement>();
 
+        player.CanMove = true;
+
         textBox.SetActive(false);
 
         if (textFile != null)
@@ -54,6 +56,7 @@ public class TextBoxManager : MonoBehaviour
 
         if (currentLine > textLines.Length - 1)
         {
+            player.CanMove = true;
             talkText.SetActive(true);
             textBox.SetActive(false);
             currentLine = 0;
@@ -62,6 +65,7 @@ public class TextBoxManager : MonoBehaviour
 
     public void ActivateTextBox()
     {
+        player.CanMove = false;
         textBox.SetActive(true);
     }
 }

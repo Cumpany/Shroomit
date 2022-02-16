@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossBarrier : MonoBehaviour
 {
+    public Movement player;
     public GameObject BossTextManager;
     public GameObject Barrier;
     public GameObject BossHealth;
@@ -15,10 +16,11 @@ public class BossBarrier : MonoBehaviour
         Bar = Barrier;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
+            FindObjectOfType<Movement>().CanMove = false;
             BossTextManager.SetActive(true);
             //FindObjectOfType<BossTextManager>().ActivateTextBox();
             Barrier.SetActive(true);
