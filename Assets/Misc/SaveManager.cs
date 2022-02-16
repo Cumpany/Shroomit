@@ -35,6 +35,7 @@ public class SaveIndex
 public class SaveOther
 {
     public bool BossBarrier {get; set;}
+    public float GameTime {get; set;}
 }
 public class SaveManager : MonoBehaviour
 {
