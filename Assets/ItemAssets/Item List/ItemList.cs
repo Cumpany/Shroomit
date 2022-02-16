@@ -13,6 +13,7 @@ public class ItemList : MonoBehaviour
         Apple,
         Banana,
         Orange,
-        Heal
+        Heal,
+        Sword_1
     }
 }

@@ -95,7 +95,8 @@ public class SaveManager : MonoBehaviour
 
         var OtherSave = new SaveOther
         {
-            BossBarrier = BossBarrier.Bar.activeSelf
+            BossBarrier = BossBarrier.Bar.activeSelf,
+            GameTime = TimerScript.Timer
         };
         File.WriteAllText("Other.sav",JsonConvert.SerializeObject(OtherSave));
         
@@ -161,6 +162,7 @@ public class SaveManager : MonoBehaviour
         }
         var g = JsonConvert.DeserializeObject<SaveOther>(File.ReadAllText("Other.sav"));
         GameObject.Find("Bossbarrier").SetActive(g.BossBarrier);
+        TimerScript.Timer = g.GameTime;
 
     }
     public static bool IsSaveFile()
@@ -171,8 +173,9 @@ public class SaveManager : MonoBehaviour
         }
         return false;
     }
-    public void DeleteSave()
+    public static void DeleteSave()
     {
+        TimerScript.Timer = 0;
         var i = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.sav");
         for (var j = 0; j < i.Length; j++)
         {
