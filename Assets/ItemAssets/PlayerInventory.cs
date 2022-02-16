@@ -89,7 +89,7 @@ public class PlayerInventory : MonoBehaviour
         i.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Cursor.ToString());
         Cursor = 0;
     }
-    public bool AnyInvSlot(ItemList.Items i)
+    public static bool AnyInvSlot(ItemList.Items i)
     {
         for (var x = 0; x < 9; x++)
         {
@@ -102,7 +102,7 @@ public class PlayerInventory : MonoBehaviour
         Debug.LogWarning($"Failed to add {i} to inventory");
         return false;
     }
-    public bool AddItem(int x, ItemList.Items i)
+    public static bool AddItem(int x, ItemList.Items i)
     {
         if (IsSlotFree(x))
         {
@@ -132,7 +132,7 @@ public class PlayerInventory : MonoBehaviour
         }
         Debug.Log("Cursor full?");
     }
-    public bool IsSlotFree(int x)
+    public static bool IsSlotFree(int x)
     {
         if (Inv[x] == 0)
         {
