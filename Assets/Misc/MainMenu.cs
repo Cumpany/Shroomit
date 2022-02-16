@@ -49,4 +49,9 @@ public class MainMenu : MonoBehaviour
         GlobalVolume = GameObject.Find("VolumeSlider").transform.GetComponent<Slider>().value;
         AudioListener.volume = GlobalVolume;
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("EndCredits");
+    }
 }
