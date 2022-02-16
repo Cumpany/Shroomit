@@ -7,6 +7,7 @@ public class BossBarrier : MonoBehaviour
     public Movement player;
     public GameObject BossTextManager;
     public GameObject Barrier;
+    public GameObject BossHealth;
     public static GameObject Bar;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class BossBarrier : MonoBehaviour
             Barrier.SetActive(true);
             Bar = Barrier;
             this.gameObject.SetActive(false);
+            BossHealth.SetActive(true);
         }
     }
 }
