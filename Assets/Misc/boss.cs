@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class boss : MonoBehaviour
 {
     public float maxEnemyHP = 50f;
-    public float enemyHP = 50f;
+    public static float enemyHP = 50f;
     private float iFrames = 0;
     [SerializeField] private GameObject HpBar;
     Rigidbody2D rb;
@@ -14,6 +14,11 @@ public class boss : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         DrawHP();
+    }
+    public static void Damage(float d)
+    {
+        enemyHP -= d;
+        Debug.Log(enemyHP);
     }
     void DrawHP()
     {
@@ -32,11 +37,10 @@ public class boss : MonoBehaviour
             healthBarImage.color = Color.green;
         }
     }
+    public Collider2D AttackHitbox;
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col);
-        Debug.Log(col.tag);
-        if (col.tag == "AttackHitbox" && iFrames == 0 && gameObject.GetComponent<BoxCollider2D>().IsTouching(col))
+        if (col == AttackHitbox && iFrames == 0)
         {
             iFrames = 30;
             Debug.Log("boss damage" + PlayerScript.PlayerDamage);
@@ -50,9 +54,9 @@ public class boss : MonoBehaviour
     {
         horizontal = rb.velocity.x;
         vertical = rb.velocity.y;
-        if (enemyHP >= 0)
+        if (enemyHP <= 0)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
     void FixedUpdate()

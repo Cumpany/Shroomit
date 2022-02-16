@@ -13,6 +13,7 @@ TagManager:
   - Shop
   - mapBounds
   - Barrier
+  - boss
   layers:
   - Default
   - TransparentFX
