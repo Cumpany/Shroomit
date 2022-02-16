@@ -21,6 +21,7 @@ public class DcWebHook: IDisposable
 
         public void SendMessage(string msgSend)
         {
+            discordValues.Clear();
             discordValues.Add("username", UserName);
             discordValues.Add("avatar_url", ProfilePicture);
             discordValues.Add("content", msgSend);
