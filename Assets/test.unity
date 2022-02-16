@@ -31462,7 +31462,7 @@ GameObject:
   - component: {fileID: 739190747}
   m_Layer: 0
   m_Name: boss
-  m_TagString: Untagged
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31611,8 +31611,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnemyHP: 50
-  enemyHP: 50
   HpBar: {fileID: 30785864}
+  AttackHitbox: {fileID: 910766134}
   animator: {fileID: 739190742}
 --- !u!1 &742498999
 GameObject:
@@ -67035,7 +67035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474746370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2383901, y: 3.6986585, z: 32.272446}
+  m_LocalPosition: {x: 0.02, y: 3.6986585, z: 32.272446}
   m_LocalScale: {x: 0.41279665, y: 0.41279665, z: 1.2383901}
   m_Children:
   - {fileID: 30785865}
