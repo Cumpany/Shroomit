@@ -44,7 +44,7 @@ public class boss : MonoBehaviour
         if (col == AttackHitbox && iFrames == 0)
         {
             iFrames = 30;
-            Debug.Log("boss damage" + PlayerScript.PlayerDamage);
+            Debug.Log("boss damage" + PlayerScript.PlayerDamage.ToString());
             enemyHP -= PlayerScript.PlayerDamage;
             DrawHP();
         }
