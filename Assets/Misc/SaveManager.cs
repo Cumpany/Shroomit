@@ -199,7 +199,8 @@ public class SaveManager : MonoBehaviour
     }
     public static bool IsSaveFile()
     {
-        if (File.Exists("Player.sav"))
+        var i = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.sav");
+        if (i.Length != 0)
         {
             return true;
         }
