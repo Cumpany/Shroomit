@@ -28,6 +28,7 @@ public class Blackscript : MonoBehaviour
             if (PlayerInventory.AnyInvSlot((ItemList.Items)4))
             {
                 PlayerScript.Gold -= 10;
+                Debug.Log("player bought health potion for 10 gold");
             }
         }
     }

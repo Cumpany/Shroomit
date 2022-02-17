@@ -28,7 +28,7 @@ public class boss : MonoBehaviour
     public static void Damage(float d)
     {
         enemyHP -= d;
-        Debug.Log(enemyHP);
+        Debug.Log("boss hp: " + enemyHP);
     }
     void DrawHP()
     {

@@ -54,6 +54,7 @@ public class SaveManager : MonoBehaviour
     {
         if (!SaveGame)
         {
+            Debug.Log("Stopped game from saving");
             return;
         }
 
@@ -141,6 +142,7 @@ public class SaveManager : MonoBehaviour
         if (!SaveGame)
         {
             DeleteSave();
+            Debug.Log("stopped game from loading save and deleted save");
             return;
         }
         var eDeletion = GameObject.FindGameObjectsWithTag("Enemy");
@@ -202,8 +204,10 @@ public class SaveManager : MonoBehaviour
         var i = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.sav");
         if (i.Length != 0)
         {
+            Debug.Log("save file exists");
             return true;
         }
+        Debug.Log("save file does not exist");
         return false;
     }
     public static void DeleteSave()
@@ -214,6 +218,7 @@ public class SaveManager : MonoBehaviour
             Debug.Log(i[j]);
             File.Delete(i[j]);
         }
+        Debug.Log("deleted " + i.Length + "files");
         boss.enemyHP = boss.maxEnemyHP;
     }
 }

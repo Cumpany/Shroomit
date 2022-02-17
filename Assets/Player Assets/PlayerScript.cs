@@ -30,30 +30,29 @@ public class PlayerScript : MonoBehaviour
         if (string.IsNullOrEmpty(MainMenu.PlayerName))
         {
             MainMenu.PlayerName = "Anonymous";
+            Debug.Log("player did not input name so defaulted to Anonymous");
         }
         if (SaveManager.IsSaveFile())
         {
+            Debug.Log("detected save file so trying to load it");
             SaveManager.StaticLoad();
         }
         // Debug.Log($"{Screen.width} {Screen.height}");
         if ((float)((float)Screen.width / (float)Screen.height) > 1.75f && (float)((float)Screen.width / (float)Screen.height) < 1.8f)
         {
-            // Debug.Log("didnt move HB    " + (float)((float)Screen.width / (float)Screen.height));
+            Debug.Log("didnt move HB    " + (float)((float)Screen.width / (float)Screen.height));
         }
         else
         {
-            // Debug.Log("moved HB    " + (float)((float)Screen.width / (float)Screen.height));
+            Debug.Log("moved HB    " + (float)((float)Screen.width / (float)Screen.height));
             GameObject.Find("HB").GetComponent<RectTransform>().position = new Vector3(1.1f, 6, 0);
         }
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Gold++;
-        }
         if (Input.GetKeyDown(KeyCode.L))
         {
+            Debug.LogWarning("idiot pressed L");
             Damage(10);
         }
         if (Input.GetMouseButtonDown(0))
@@ -66,6 +65,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log("pressed escape, trying to save");
             SaveManager.Save();
             SceneManager.LoadScene("MainMenu");
         }
@@ -138,6 +138,7 @@ public class PlayerScript : MonoBehaviour
             UpdateHealthBar();
             if (health <= 0)
             {
+                Debug.LogWarning("player died, deleting save file nerd");
                 SaveManager.DeleteSave();
                 SceneManager.LoadScene("MainMenu");
             }
@@ -166,7 +167,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            Debug.Log("hahah gay");
+            Debug.Log("hahah gay player took 10 damgea");
             Damage(10);
         } 
     }
@@ -174,6 +175,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
+            Debug.Log("gay ass player stayed with the enemy and took 10 ddamagbuer");
             Damage(10);
         } 
     }

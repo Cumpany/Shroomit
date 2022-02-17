@@ -147,5 +147,6 @@ public class PlayerInventory : MonoBehaviour
             Inv[x] = 0;
         }
         Cursor = 0;
+        Debug.LogWarning("cleared inventory and cursor");
     }
 }
