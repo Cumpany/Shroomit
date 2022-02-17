@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        if (PlayerName == "")
+        if (string.IsNullOrEmpty(PlayerName))
         {
             PlayerName = "Anonymous";
         }
