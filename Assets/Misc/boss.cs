@@ -76,22 +76,24 @@ public class boss : MonoBehaviour
         {
             iFrames--;
         }
-        if (horizontal > 0)
+        
+
+        if (horizontal > 0 && horizontal > vertical)
         {
             ChangeAnim("right");
         }
-        else if (horizontal < 0)
+        else if (horizontal < 0 !& horizontal > vertical)
         {
-            ChangeAnim("left");
+            ChangeAnim("down");
         }
 
-        if (vertical > 0)
+        if (vertical > 0 && vertical > horizontal)
         {
             ChangeAnim("up");
         }
-        else if (vertical < 0)
+        else if (vertical < 0 !& vertical > horizontal)
         {
-            ChangeAnim("down");
+            ChangeAnim("left");
         }
 
         if (horizontal == 0 && vertical == 0)
