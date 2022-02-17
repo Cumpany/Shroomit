@@ -19,7 +19,7 @@ public class PlayerScript : MonoBehaviour
     static float iFrames = 0;
     public static float aFrames = 0;
     public Image healthBarImage;
-    public static float PlayerDamage = 10/3;
+    public static float PlayerDamage = 0;
     [SerializeField] private GameObject AttackHitbox;
     void Start()
     {
@@ -95,6 +95,11 @@ public class PlayerScript : MonoBehaviour
                 PlayerDamage = 69.420f;
                 break;
             }
+            else if (PlayerInventory.Inv[i] == (ItemList.Items)8)
+            {
+                PlayerDamage = 10f;
+                break;
+            }
             else if (PlayerInventory.Inv[i] == (ItemList.Items)6)
             {
                 PlayerDamage = 5f;
@@ -110,6 +115,7 @@ public class PlayerScript : MonoBehaviour
                 PlayerDamage = 0;
             }
         }
+        Debug.Log(PlayerDamage);
         if (aFrames == 0 && PlayerDamage != 0)
         {
             animator.SetBool("IsAttacking", true);
@@ -178,7 +184,7 @@ public class PlayerScript : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             Debug.Log("hahah gay player took 10 damgea");
-            Damage(10);
+            Damage(20);
         } 
     }
     void OnTriggerStay2D(Collider2D col)

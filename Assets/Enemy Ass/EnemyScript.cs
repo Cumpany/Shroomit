@@ -9,8 +9,8 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private GameObject Loot;
     [SerializeField] private GameObject Loot2;
     public GameObject target;
-    public float maxEnemyHP = 10f;
-    public float enemyHP = 10f;
+    public float maxEnemyHP = 12.5f;
+    public float enemyHP = 12.5f;
     private float iFrames = 0;
 
     private GameObject HpBar;
@@ -74,6 +74,10 @@ public class EnemyScript : MonoBehaviour
                 new Vector3(gameObject.transform.position.x+0.1f,gameObject.transform.position.y+0.1f,Loot2.transform.position.z);
             }
             PlayerScript.Gold++;
+            if (maxEnemyHP > 15)
+            {
+                PlayerScript.Gold += 4;
+            }
             Destroy(gameObject);
         }
     }
