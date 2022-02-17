@@ -13,7 +13,7 @@ public class boss : MonoBehaviour
     Rigidbody2D rb;
     Transform player;
 
-    float speed = 5f;
+    float speed = 3f;
 
     public BossBarrier Bossbarrier;
     public BossTextManager bossTextManager;
@@ -104,6 +104,11 @@ public class boss : MonoBehaviour
             Vector2 target = new Vector2(player.position.x, player.position.y);
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
             rb.MovePosition(newPos);
+        }
+
+        if (enemyHP < 50)
+        {
+            speed = 5f;
         }
     }
     public Animator animator;
