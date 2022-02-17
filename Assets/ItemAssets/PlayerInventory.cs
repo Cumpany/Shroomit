@@ -31,7 +31,7 @@ public class PlayerInventory : MonoBehaviour
         }
         else
         {
-            CursorObject.transform.position = new Vector3(0,1,0);
+            CursorObject.transform.position = new Vector3(0,-100,0);
         }
     }
     void Start()

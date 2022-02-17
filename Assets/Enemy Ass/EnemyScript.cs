@@ -73,6 +73,7 @@ public class EnemyScript : MonoBehaviour
                 j.transform.position = 
                 new Vector3(gameObject.transform.position.x+0.1f,gameObject.transform.position.y+0.1f,Loot2.transform.position.z);
             }
+            PlayerScript.Gold++;
             Destroy(gameObject);
         }
     }
