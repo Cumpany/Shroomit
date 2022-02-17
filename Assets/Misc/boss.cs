@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class boss : MonoBehaviour
 {
-    public static float maxEnemyHP = 50f;
-    public static float enemyHP = 50f;
+    public static float maxEnemyHP = 100f;
+    public static float enemyHP = 100f;
     private float iFrames = 0;
     [SerializeField] private GameObject HpBar;
     Rigidbody2D rb;
