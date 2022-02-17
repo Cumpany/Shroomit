@@ -29289,8 +29289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5.3}
-  m_SizeDelta: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 5.189}
+  m_SizeDelta: {x: 1, y: 0.955}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30785866
 MonoBehaviour:
@@ -31997,6 +31997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HpBar: {fileID: 30785864}
+  rb: {fileID: 739190744}
   Bossbarrier: {fileID: 264824504}
   bossTextManager: {fileID: 1766641673}
   AttackHitbox: {fileID: 910766134}
@@ -67868,8 +67869,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474746370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 3.6986585, z: 32.272446}
-  m_LocalScale: {x: 0.41279665, y: 0.41279665, z: 1.2383901}
+  m_LocalPosition: {x: 0, y: -6.09, z: 32.272446}
+  m_LocalScale: {x: 0.34163052, y: 0.34163052, z: 1.0248916}
   m_Children:
   - {fileID: 30785865}
   m_Father: {fileID: 769003039}

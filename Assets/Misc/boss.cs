@@ -13,7 +13,7 @@ public class boss : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     Transform player;
 
-    float speed = 3f;
+    float speed = 400f;
 
     public BossBarrier Bossbarrier;
     public BossTextManager bossTextManager;
@@ -101,14 +101,12 @@ public class boss : MonoBehaviour
 
         if (Bossbarrier.ActivateBossMovement == true && bossTextManager.BossCanMove)
         {
-            Vector2 target = new Vector2(player.position.x, player.position.y);
-            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
-            rb.MovePosition(newPos);
+            follow(player.transform, gameObject.transform);
         }
 
         if (enemyHP < 50)
         {
-            speed = 5f;
+            speed = 650f;
         }
     }
     public Animator animator;
@@ -144,5 +142,10 @@ public class boss : MonoBehaviour
                 break;
         }
         // animator.SetInteger("LastDirection", Direction - 1);
+    }
+
+    private void follow(Transform target, Transform enemy)
+    {
+        rb.AddForce((target.transform.position - enemy.transform.position).normalized * speed);
     }
 }
