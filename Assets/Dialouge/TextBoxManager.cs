@@ -18,6 +18,7 @@ public class TextBoxManager : MonoBehaviour
 
     public Movement player;
 
+    bool HasTalkedToAbbis = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +57,10 @@ public class TextBoxManager : MonoBehaviour
 
         if (currentLine > textLines.Length - 1)
         {
+            if (!HasTalkedToAbbis)
+            {
+                PlayerInventory.AnyInvSlot((ItemList.Items)5);
+            }
             player.CanMove = true;
             talkText.SetActive(true);
             textBox.SetActive(false);
