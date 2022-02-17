@@ -90,17 +90,27 @@ public class PlayerScript : MonoBehaviour
     {
         for (var i = 0; i < 9; i++)
         {
-            if (PlayerInventory.Inv[i] == (ItemList.Items)5)
+            if (PlayerInventory.Inv[i] == (ItemList.Items)7)
             {
-                PlayerDamage = (10/3)*2;
+                PlayerDamage = 69.420f;
+                break;
+            }
+            else if (PlayerInventory.Inv[i] == (ItemList.Items)6)
+            {
+                PlayerDamage = 5f;
+                break;
+            }
+            else if (PlayerInventory.Inv[i] == (ItemList.Items)5)
+            {
+                PlayerDamage = 2.5f;
                 break;
             }
             else
             {
-                PlayerDamage = 10/3;
+                PlayerDamage = 0;
             }
         }
-        if (aFrames == 0)
+        if (aFrames == 0 && PlayerDamage != 0)
         {
             animator.SetBool("IsAttacking", true);
             switch (Movement.Direction)
