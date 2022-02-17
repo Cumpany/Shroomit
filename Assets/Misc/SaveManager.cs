@@ -52,7 +52,10 @@ public class SaveManager : MonoBehaviour
     }
     public static void Save()
     {
-        
+        if (!SaveGame)
+        {
+            return;
+        }
 
         var Player = new PlayerSave 
         {
@@ -135,6 +138,11 @@ public class SaveManager : MonoBehaviour
     }
     public void Load()
     {
+        if (!SaveGame)
+        {
+            DeleteSave();
+            return;
+        }
         var eDeletion = GameObject.FindGameObjectsWithTag("Enemy");
         for (var i = 0; i < eDeletion.Length; i++)
         {
