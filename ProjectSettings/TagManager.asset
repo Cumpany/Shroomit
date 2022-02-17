@@ -14,6 +14,7 @@ TagManager:
   - mapBounds
   - Barrier
   - boss
+  - BossBarrier
   layers:
   - Default
   - TransparentFX

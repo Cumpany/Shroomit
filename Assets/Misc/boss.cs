@@ -11,10 +11,18 @@ public class boss : MonoBehaviour
     private float iFrames = 0;
     [SerializeField] private GameObject HpBar;
     Rigidbody2D rb;
+    Transform player;
+
+    float speed = 5f;
+
+    public BossBarrier Bossbarrier;
+    public BossTextManager bossTextManager;
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         DrawHP();
+        Vector3 vel = new Vector3(rb.velocity.x, rb.velocity.y);
     }
     public static void Damage(float d)
     {
@@ -88,6 +96,13 @@ public class boss : MonoBehaviour
         if (horizontal == 0 && vertical == 0)
         {
             ChangeAnim("idle");
+        }
+
+        if (Bossbarrier.ActivateBossMovement == true && bossTextManager.BossCanMove)
+        {
+            Vector2 target = new Vector2(player.position.x, player.position.y);
+            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
+            rb.MovePosition(newPos);
         }
     }
     public Animator animator;

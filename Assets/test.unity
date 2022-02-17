@@ -30018,7 +30018,7 @@ GameObject:
   - component: {fileID: 264824504}
   m_Layer: 0
   m_Name: Trigger
-  m_TagString: Untagged
+  m_TagString: BossBarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30053,6 +30053,7 @@ MonoBehaviour:
   BossTextManager: {fileID: 889095628}
   Barrier: {fileID: 395427024}
   BossHealth: {fileID: 1474746370}
+  ActivateBossMovement: 0
 --- !u!61 &264824505
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31996,6 +31997,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HpBar: {fileID: 30785864}
+  Bossbarrier: {fileID: 264824504}
+  bossTextManager: {fileID: 1766641673}
   AttackHitbox: {fileID: 910766134}
   animator: {fileID: 739190742}
 --- !u!1 &742498999
@@ -67796,7 +67799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6393824883903777840, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 6393824883903777840, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: m_LocalPosition.x

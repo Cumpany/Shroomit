@@ -15,6 +15,8 @@ public class BossTextManager : MonoBehaviour
     public int currentLine;
     public int endAtLine;
 
+    public bool BossCanMove = false;
+
     public Movement player;
 
     // Start is called before the first frame update
@@ -56,6 +58,7 @@ public class BossTextManager : MonoBehaviour
 
         if (currentLine > textLines.Length - 1)
         {
+            BossCanMove = true;
             player.CanMove = true;
             textBox.SetActive(false);
             currentLine = 0;

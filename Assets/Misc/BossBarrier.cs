@@ -9,6 +9,7 @@ public class BossBarrier : MonoBehaviour
     public GameObject Barrier;
     public GameObject BossHealth;
     public static GameObject Bar;
+    public bool ActivateBossMovement = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class BossBarrier : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            ActivateBossMovement = true;
             FindObjectOfType<Movement>().CanMove = false;
             BossTextManager.SetActive(true);
             //FindObjectOfType<BossTextManager>().ActivateTextBox();
