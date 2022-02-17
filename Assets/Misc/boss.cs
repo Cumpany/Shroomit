@@ -21,6 +21,7 @@ public class boss : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
+        Debug.Log(rb);
         DrawHP();
         Vector3 vel = new Vector3(rb.velocity.x, rb.velocity.y);
     }
@@ -61,8 +62,6 @@ public class boss : MonoBehaviour
     float vertical;
     void Update()
     {
-        horizontal = rb.velocity.x;
-        vertical = rb.velocity.y;
         if (enemyHP <= 0)
         {
             SaveManager.DeleteSave();
@@ -71,6 +70,8 @@ public class boss : MonoBehaviour
     }
     void FixedUpdate()
     {
+        horizontal = rb.velocity.x;
+        vertical = rb.velocity.y;
         if (iFrames > 0)
         {
             iFrames--;
