@@ -32,4 +32,28 @@ public class Blackscript : MonoBehaviour
             }
         }
     }
+
+    public void Sword4()
+    {
+        if (PlayerScript.Gold >= 25)
+        {
+            if (PlayerInventory.AnyInvSlot((ItemList.Items)8))
+            {
+                PlayerScript.Gold -= 25;
+                Debug.Log("player bought Sword4 for 25 gold");
+            }
+        }
+    }
+
+    public void Sword2()
+    {
+        if (PlayerScript.Gold >= 10)
+        {
+            if (PlayerInventory.AnyInvSlot((ItemList.Items)6))
+            {
+                PlayerScript.Gold -= 10;
+                Debug.Log("player bought Sword2 for 10 gold");
+            }
+        }
+    }
 }

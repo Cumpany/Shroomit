@@ -17,6 +17,7 @@ public class boss : MonoBehaviour
 
     public BossBarrier Bossbarrier;
     public BossTextManager bossTextManager;
+    public PlayerScript PlayerScript;
 
   
     void Start()
@@ -61,13 +62,22 @@ public class boss : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            PlayerScript.Damage(20);
+        }
+    }
     private void OnCollisionStay2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
+            PlayerScript.Damage(10);
             float h = player.transform.position.x - rb.position.x;
             float v = player.transform.position.y - rb.position.y;
             Debug.Log("H:" + h + "V:" + v);
+            animator.SetTrigger("IsAttacking");
             if (h > 0 && v > 0 && h > v)
             {
                 animator.SetInteger("AttackDirection", 2);
@@ -96,6 +106,14 @@ public class boss : MonoBehaviour
             {
                 animator.SetInteger("AttackDirection", 3);
             }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            animator.ResetTrigger("IsAttacking");
         }
     }
 
@@ -195,5 +213,10 @@ public class boss : MonoBehaviour
     private void follow(Transform target, Transform enemy)
     {
         rb.AddForce((target.transform.position - enemy.transform.position).normalized * speed);
+    }
+
+    public static IEnumerator Wait(int i)
+    {
+        yield return new WaitForSeconds(i);
     }
 }

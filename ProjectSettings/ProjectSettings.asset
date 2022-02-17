@@ -589,11 +589,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: 2D_BuiltInRenderer
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\abbebabbe\Documents\GitHub\ProfilVecka1\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: Shroomit Corp
+  metroCertificateIssuer: Shroomit Corp
+  metroCertificateNotAfter: 80e8c6761d43d901
   metroApplicationDescription: 2D_BuiltInRenderer
   wsaImages: {}
   metroTileShortName: 
