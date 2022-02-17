@@ -72,8 +72,6 @@ public class boss : MonoBehaviour
     {
         horizontal = rb.velocity.x;
         vertical = rb.velocity.y;
-        Debug.Log(rb.position);
-        Debug.LogWarning($"h: {horizontal}  v: {vertical}");
         if (iFrames > 0)
         {
             iFrames--;
