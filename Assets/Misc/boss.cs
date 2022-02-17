@@ -10,7 +10,7 @@ public class boss : MonoBehaviour
     public static float enemyHP = 100f;
     private float iFrames = 0;
     [SerializeField] private GameObject HpBar;
-    Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb;
     Transform player;
 
     float speed = 3f;
@@ -20,7 +20,7 @@ public class boss : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        rb = GetComponent<Rigidbody2D>();
+        // rb = GetComponent<Rigidbody2D>();
         Debug.Log(rb);
         DrawHP();
         Vector3 vel = new Vector3(rb.velocity.x, rb.velocity.y);
@@ -72,6 +72,8 @@ public class boss : MonoBehaviour
     {
         horizontal = rb.velocity.x;
         vertical = rb.velocity.y;
+        Debug.Log(rb.position);
+        Debug.LogWarning($"h: {horizontal}  v: {vertical}");
         if (iFrames > 0)
         {
             iFrames--;
