@@ -33555,7 +33555,6 @@ RectTransform:
   - {fileID: 1474746371}
   - {fileID: 1144933333}
   - {fileID: 341880362}
-  - {fileID: 1450318358}
   m_Father: {fileID: 926781229}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34073,6 +34072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 909032534}
   Hurt: {fileID: 909032535}
+  EnableSpeedrunTimer: 0
   healthBarImage: {fileID: 1380023827}
   AttackHitbox: {fileID: 910766133}
 --- !u!114 &909032533
@@ -68790,6 +68790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1260999354}
   - component: {fileID: 1260999353}
+  - component: {fileID: 1260999355}
   m_Layer: 0
   m_Name: TextBoxManager
   m_TagString: Untagged
@@ -68831,6 +68832,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1260999355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260999352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2cdac4af8aec5446aed55f10184caae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnableSpeedrunTimer: 0
+  speedRunTimer: {fileID: 1144933332}
 --- !u!1 &1284865821
 GameObject:
   m_ObjectHideFlags: 0
@@ -69596,17 +69611,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450318357}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2821.3335}
+  m_LocalScale: {x: 1.8177341, y: 1.8177341, z: 24.236454}
   m_Children: []
-  m_Father: {fileID: 769003039}
-  m_RootOrder: 6
+  m_Father: {fileID: 1755414877}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.29, y: 3.51}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 125.06011, y: 185.84148}
+  m_SizeDelta: {x: 55.9298, y: 35.9243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1450318359
 MonoBehaviour:
@@ -69620,7 +69635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: dd62a218d3e6cdb4a935d6f5bd3cf655, type: 3}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -70526,6 +70541,7 @@ RectTransform:
   - {fileID: 296934897}
   - {fileID: 889095629}
   - {fileID: 222035512}
+  - {fileID: 1450318358}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

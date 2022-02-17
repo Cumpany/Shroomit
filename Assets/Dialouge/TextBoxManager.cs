@@ -65,6 +65,7 @@ public class TextBoxManager : MonoBehaviour
             talkText.SetActive(true);
             textBox.SetActive(false);
             currentLine = 0;
+            HasTalkedToAbbis = true;
         }
     }
 

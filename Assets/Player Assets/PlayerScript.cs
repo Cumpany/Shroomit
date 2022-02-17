@@ -14,8 +14,9 @@ public class PlayerScript : MonoBehaviour
     public AudioSource Hurt;
 
     public static int Gold;
-
+    
     static public float health = 100, maxHealth = 100;
+    
     static float iFrames = 0;
     public static float aFrames = 0;
     public Image healthBarImage;
