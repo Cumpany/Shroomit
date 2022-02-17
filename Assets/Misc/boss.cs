@@ -17,6 +17,8 @@ public class boss : MonoBehaviour
 
     public BossBarrier Bossbarrier;
     public BossTextManager bossTextManager;
+
+  
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -58,6 +60,45 @@ public class boss : MonoBehaviour
             DrawHP();
         }
     }
+
+    private void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            float h = player.transform.position.x - rb.position.x;
+            float v = player.transform.position.y - rb.position.y;
+            Debug.Log("H:" + h + "V:" + v);
+            if (h > 0 && v > 0 && h > v)
+            {
+                animator.SetInteger("AttackDirection", 2);
+            }
+            else if (h > 0 && v > 0 && h < v)
+            {
+                animator.SetInteger("AttackDirection", 1);
+            }
+            else if (h < 0 && v > 0 && -h > v)
+            {
+                animator.SetInteger("AttackDirection", 4);
+            }
+            else if (h < 0 && v > 0 && -h < v)
+            {
+                animator.SetInteger("AttackDirection", 1);
+            }
+            else if (h > 0 && v < 0 && h > -v)
+            {
+                animator.SetInteger("AttackDirection", 2);
+            }
+            else if (h < 0 && v < 0 && -h > -v)
+            {
+                animator.SetInteger("AttackDirection", 4);
+            }
+            else
+            {
+                animator.SetInteger("AttackDirection", 3);
+            }
+        }
+    }
+
     float horizontal;
     float vertical;
     void Update()
@@ -70,6 +111,7 @@ public class boss : MonoBehaviour
     }
     void FixedUpdate()
     {
+        
         horizontal = rb.velocity.x;
         vertical = rb.velocity.y;
         if (iFrames > 0)
@@ -96,21 +138,25 @@ public class boss : MonoBehaviour
             ChangeAnim("left");
         }
 
+        
         if (horizontal == 0 && vertical == 0)
         {
             ChangeAnim("idle");
         }
+
 
         if (Bossbarrier.ActivateBossMovement == true && bossTextManager.BossCanMove)
         {
             follow(player.transform, gameObject.transform);
         }
 
+
         if (enemyHP < 50)
         {
             speed = 650f;
         }
     }
+
     public Animator animator;
     public static int Direction;
     void ChangeAnim(string d)
