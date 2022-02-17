@@ -17,16 +17,17 @@ public class Blackscript : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        GoldObject.GetComponent<Text>().text = (player.Gold).ToString();
+        GoldObject.GetComponent<Text>().text = (PlayerScript.Gold).ToString();
     }
 
     public void HealPotion()
     {
-        if (player.Gold >= 10)
+        var p = new PlayerScript();
+        if (PlayerScript.Gold >= 10)
         {
             if (PlayerInventory.AnyInvSlot((ItemList.Items)4))
             {
-                player.Gold -= 10;
+                PlayerScript.Gold -= 10;
             }
         }
     }

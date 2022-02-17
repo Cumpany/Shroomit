@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour
 
     public AudioSource Hurt;
 
-    public int Gold;
+    public static int Gold;
 
     static public float health = 100, maxHealth = 100;
     static float iFrames = 0;
@@ -23,6 +23,10 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private GameObject AttackHitbox;
     void Start()
     {
+        if (string.IsNullOrEmpty(MainMenu.PlayerName))
+        {
+            MainMenu.PlayerName = "Anonymous";
+        }
         if (SaveManager.IsSaveFile())
         {
             SaveManager.StaticLoad();
@@ -74,7 +78,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (aFrames == 20)
         {
-            AttackHitbox.transform.position = new Vector3(0,0,0);
+            AttackHitbox.transform.position = new Vector3(0,-100,0);
         }
     }
     Vector3 a;
