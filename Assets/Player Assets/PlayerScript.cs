@@ -23,6 +23,10 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private GameObject AttackHitbox;
     void Start()
     {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
+        {
+            StaticScript.Timer = 0;
+        }
         if (string.IsNullOrEmpty(MainMenu.PlayerName))
         {
             MainMenu.PlayerName = "Anonymous";

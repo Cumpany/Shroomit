@@ -22,6 +22,26 @@ public class MainMenu : MonoBehaviour
     {
         Music.loop = true;
         Music.Play();
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))
+        {
+            Debug.Log(StaticScript.Timer);
+            t = StaticScript.Timer;
+            Debug.Log(t);
+            Debug.Log(t);
+            GameObject.Find("TimerText").GetComponent<Text>().text = (t/50).ToString();
+        }
+    }
+    private float t;
+    private bool TimeSubmited = false;
+    public void SubmitTime()
+    {
+        if (TimeSubmited)
+        {
+            return;
+        }
+        var d = new DcSend();
+        d.Send($"**{(t/50).ToString()}** achieved by **{MainMenu.PlayerName}**");
+        TimeSubmited = true;
     }
 
     public void StartGame()
