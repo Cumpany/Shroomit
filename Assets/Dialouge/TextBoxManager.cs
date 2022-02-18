@@ -104,6 +104,7 @@ public class TextBoxManager : MonoBehaviour
             endAtLine = 10;
             currentLine = 9;
             HasTalkedToAbbis = true;
+            PlayerScript.Gold += 10;
         }
         else if (currentLine > endAtLine - 1 && TimesTalkedToAbbis == 1 && !HasMilkInInv && !HasGivenMilkToAbbis) //Second time talking to abbis without the glass of milk
         {
