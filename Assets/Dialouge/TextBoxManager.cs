@@ -70,7 +70,7 @@ public class TextBoxManager : MonoBehaviour
     }
 
     public void ActivateTextBox()
-    {
+    {   
         player.CanMove = false;
         textBox.SetActive(true);
     }
