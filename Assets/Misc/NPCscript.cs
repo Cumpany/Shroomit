@@ -9,7 +9,7 @@ public class NPCscript : MonoBehaviour
 
     public static bool inRange;
 
-    public AudioSource audio;
+    public AudioSource gay;
     public AudioClip audioClip1;
     public AudioClip audioClip2;
     public AudioClip audioClip3;
@@ -19,6 +19,7 @@ public class NPCscript : MonoBehaviour
 
     void Start()
     {
+        gay.clip = audioClip1;
         TalkText.SetActive(false);
     }
 
@@ -61,19 +62,19 @@ public class NPCscript : MonoBehaviour
         switch (s)
         {
             case "1":
-                audio.clip = audioClip1;
+                gay.clip = audioClip1;
                 break;
             case "2":
-                audio.clip = audioClip2;
+                gay.clip = audioClip2;
                 break;
             case "3":
-                audio.clip = audioClip3;
+                gay.clip = audioClip3;
                 break;
             case "4":
-                audio.clip = audioClip4;
+                gay.clip = audioClip4;
                 break;
             case "5":
-                audio.clip = audioClip5;
+                gay.clip = audioClip5;
                 break;
             default:
                 Debug.LogWarning("No audio");
