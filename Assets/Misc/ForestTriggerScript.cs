@@ -18,6 +18,7 @@ public class ForestTriggerScript : MonoBehaviour
         if (miniboss.GetComponent<EnemyScript>().enemyHP <= 0)
         {
             ForestBarrier.SetActive(false);
+            this.gameObject.SetActive(false);
         }
     }
 }
