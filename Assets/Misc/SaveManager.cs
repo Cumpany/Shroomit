@@ -220,5 +220,6 @@ public class SaveManager : MonoBehaviour
         }
         Debug.Log("deleted " + i.Length + "files");
         boss.enemyHP = boss.maxEnemyHP;
+        PlayerScript.health = PlayerScript.maxHealth;
     }
 }
