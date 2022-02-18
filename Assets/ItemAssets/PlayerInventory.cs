@@ -89,6 +89,24 @@ public class PlayerInventory : MonoBehaviour
         i.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(Cursor.ToString());
         Cursor = 0;
     }
+    static void UpdateHealthBar() 
+    {
+        Image healthBarImage = GameObject.Find("HBI").GetComponent<Image>();
+        healthBarImage.fillAmount = Mathf.Clamp(PlayerScript.health / PlayerScript.maxHealth, 0, 1f);
+        if (PlayerScript.health < 15)
+        {
+            healthBarImage.color = Color.red;
+        }
+        else if (PlayerScript.health < 50)
+        {
+            healthBarImage.color = Color.yellow;
+        }
+        else
+        {
+            healthBarImage.color = Color.green;
+        }
+        
+    }
     public static bool AnyInvSlot(ItemList.Items i)
     {
         if (i == ItemList.Items.Heal && PlayerScript.health < 100)
@@ -98,6 +116,7 @@ public class PlayerInventory : MonoBehaviour
             {
                 PlayerScript.health = PlayerScript.maxHealth;
             }
+            UpdateHealthBar();
             Debug.Log("healed player for 25 hp");
             return true;
         }

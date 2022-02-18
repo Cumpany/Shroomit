@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour
             Debug.Log(StaticScript.Timer);
             t = StaticScript.Timer;
             Debug.Log(t);
-            GameObject.Find("TimerText").GetComponent<Text>().text = F();
+            GameObject.Find("TimerText").GetComponent<Text>().text = ConvertTime();
         }
     }
     private float t;
@@ -39,10 +39,10 @@ public class MainMenu : MonoBehaviour
             return;
         }
         var d = new DcSend();
-        d.Send($"**{F()}** achieved by **{MainMenu.PlayerName}**");
+        d.Send($"**{ConvertTime()}** achieved by **{MainMenu.PlayerName}**");
         TimeSubmited = true;
     }
-    string F()
+    string ConvertTime()
     {
         TimeSpan t = TimeSpan.FromSeconds( StaticScript.Timer/50 );
 

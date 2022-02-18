@@ -35649,6 +35649,9 @@ MonoBehaviour:
   Hurt: {fileID: 909032535}
   healthBarImage: {fileID: 1380023827}
   AttackHitbox: {fileID: 910766133}
+  Hurt1: {fileID: 8300000, guid: 7ce812bdb596f8b43ad38262bab2b8a9, type: 3}
+  Hurt2: {fileID: 8300000, guid: 25dd57cfcf00498448ffe86f19e09890, type: 3}
+  Hurt3: {fileID: 8300000, guid: b1495416ed7903a4789e138efce70b83, type: 3}
 --- !u!114 &909032533
 MonoBehaviour:
   m_ObjectHideFlags: 0

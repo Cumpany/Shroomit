@@ -77,20 +77,6 @@ public class PlayerScript : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
             PlayerScript.health = float.MaxValue;
         }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Debug.Log(F());
-        }
-    }
-    string F()
-    {
-        TimeSpan t = TimeSpan.FromSeconds( StaticScript.Timer/50 );
-
-        string answer = string.Format("{0:D2}:{1:D2}.{2:D3}", 
-            t.Minutes, 
-            t.Seconds, 
-            t.Milliseconds);
-        return answer;
     }
     void FixedUpdate()
     {
@@ -119,17 +105,17 @@ public class PlayerScript : MonoBehaviour
             }
             else if (PlayerInventory.Inv[i] == (ItemList.Items)8)
             {
-                PlayerDamage = 10f;
+                PlayerDamage = 9.5f;
                 break;
             }
             else if (PlayerInventory.Inv[i] == (ItemList.Items)6)
             {
-                PlayerDamage = 5f;
+                PlayerDamage = 6f;
                 break;
             }
             else if (PlayerInventory.Inv[i] == (ItemList.Items)5)
             {
-                PlayerDamage = 2.5f;
+                PlayerDamage = 3f;
                 break;
             }
             else
@@ -165,14 +151,31 @@ public class PlayerScript : MonoBehaviour
             aFrames = 30;
         }
     }
+    public AudioClip Hurt1;
+    public AudioClip Hurt2;
+    public AudioClip Hurt3;
     public void Damage(float d)
     {
         if (iFrames <= 0)
         {
+            var rng = UnityEngine.Random.Range(1,4);
+            switch (rng)
+            {
+                case 1:
+                    Hurt.clip = Hurt1;
+                    break;
+                case 2:
+                    Hurt.clip = Hurt2;
+                    break;
+                case 3:
+                    Hurt.clip = Hurt3;
+                    break;
+            }
+            Debug.Log(Hurt);
             Debug.Log($"took {d} damgaeg");
             health -= d;
             Hurt.Play();
-            Hurt.loop =false;
+            Hurt.loop = false;
             UpdateHealthBar();
             if (health <= 0)
             {
