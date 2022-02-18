@@ -91,6 +91,16 @@ public class PlayerInventory : MonoBehaviour
     }
     public static bool AnyInvSlot(ItemList.Items i)
     {
+        if (i == ItemList.Items.Heal && PlayerScript.health < 100)
+        {
+            PlayerScript.health += 25;
+            if (PlayerScript.health > PlayerScript.maxHealth)
+            {
+                PlayerScript.health = PlayerScript.maxHealth;
+            }
+            Debug.Log("healed player for 25 hp");
+            return true;
+        }
         for (var x = 0; x < 9; x++)
         {
             if (AddItem(x,i))
