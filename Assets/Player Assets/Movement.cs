@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
     {
         if (CanMove == false)
         {
+            rb.velocity = new Vector2(0,0);
             return;
         }
         horizontal = Input.GetAxisRaw("Horizontal");
