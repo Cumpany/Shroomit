@@ -76,7 +76,7 @@ public class boss : MonoBehaviour
             PlayerScript.Damage(10);
             float h = player.transform.position.x - rb.position.x;
             float v = player.transform.position.y - rb.position.y;
-            Debug.Log("H:" + h + "V:" + v);
+            Debug.Log("H: " + h + " V: " + v);
             animator.SetTrigger("IsAttacking");
             if (h > 0 && v > 0 && h > v)
             {
