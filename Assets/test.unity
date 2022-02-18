@@ -32104,11 +32104,11 @@ PrefabInstance:
     - target: {fileID: 4645395023309509394, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: Loot
       value: 
-      objectReference: {fileID: 1570714161131774061, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4645395023309509394, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: Loot2
       value: 
-      objectReference: {fileID: 7719658302025506776, guid: 4c4ba4e7a6af8a1429a47ff327e1a241, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5967068650219657742, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: m_Name
       value: enemy (16)
@@ -32347,11 +32347,11 @@ PrefabInstance:
     - target: {fileID: 4645395023309509394, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: Loot
       value: 
-      objectReference: {fileID: 1570714161131774061, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4645395023309509394, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: Loot2
       value: 
-      objectReference: {fileID: 7719658302025506776, guid: 4c4ba4e7a6af8a1429a47ff327e1a241, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5967068650219657742, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: m_Name
       value: enemy (2)
@@ -33366,11 +33366,11 @@ PrefabInstance:
     - target: {fileID: 4645395023309509394, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: Loot
       value: 
-      objectReference: {fileID: 7719658302025506776, guid: 4c4ba4e7a6af8a1429a47ff327e1a241, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4645395023309509394, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: Loot2
       value: 
-      objectReference: {fileID: 1570714161131774061, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4645395023309509394, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: LootID
       value: 1
@@ -69239,6 +69239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf18f4357d3c9164394b9257bab58ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nPCscript: {fileID: 0}
   talkText: {fileID: 503125314}
   textBox: {fileID: 296934896}
   theText: {fileID: 342653944}
@@ -69464,11 +69465,11 @@ PrefabInstance:
     - target: {fileID: 4645395023309509394, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: Loot
       value: 
-      objectReference: {fileID: 7719658302025506776, guid: 4c4ba4e7a6af8a1429a47ff327e1a241, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4645395023309509394, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: Loot2
       value: 
-      objectReference: {fileID: 1570714161131774061, guid: 4a3029bd75f23da4d9d424741646e7e6, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4645395023309509394, guid: 52233d0eaef39eb4c92f708e576a3c4c, type: 3}
       propertyPath: LootID
       value: 1
