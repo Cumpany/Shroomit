@@ -35110,7 +35110,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_Sprite: {fileID: 7482667652216324306, guid: 91b3ccc78662d71489f3d725f05e92f9, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.2509804}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -72965,6 +72965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: miniboss
       objectReference: {fileID: 0}
+    - target: {fileID: 6763671130564109906, guid: 8bdd466dc2afc454c9a2244824d445e5, type: 3}
+      propertyPath: Loot
+      value: 
+      objectReference: {fileID: 8706883568611720102, guid: 06417665287cd294297d83aa28d99502, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bdd466dc2afc454c9a2244824d445e5, type: 3}
 --- !u!1 &2137698164658228041 stripped
