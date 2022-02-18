@@ -56,6 +56,8 @@ public class TextBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log(currentLine);
         theText.text = textLines[currentLine];
 
         var i = PlayerInventory.Hasitem(ItemList.Items.Milk);
@@ -82,8 +84,6 @@ public class TextBoxManager : MonoBehaviour
         {
             currentLine = 11;
             endAtLine = 15;
-            var i = PlayerInventory.Hasitem(ItemList.Items.Milk);
-            PlayerInventory.RemoveItem(i);
         }
         if (HasGivenMilkToAbbis)
         {
@@ -133,6 +133,8 @@ public class TextBoxManager : MonoBehaviour
             currentLine = 16;
             endAtLine = 69;
             HasGivenMilkToAbbis = true;
+            var i = PlayerInventory.Hasitem(ItemList.Items.Milk);
+            PlayerInventory.RemoveItem(i);
         }
         else if (TimesTalkedToAbbis == 10) //abbis dialogue completed
         {
