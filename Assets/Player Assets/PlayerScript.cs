@@ -70,6 +70,12 @@ public class PlayerScript : MonoBehaviour
             SaveManager.Save();
             SceneManager.LoadScene("MainMenu");
         }
+        if (Input.GetKey(KeyCode.G) && Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.Y))
+        {
+            Debug.LogWarning("GodMode. Have fun");
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            PlayerScript.health = float.MaxValue;
+        }
     }
     void FixedUpdate()
     {
