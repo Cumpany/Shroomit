@@ -51,10 +51,12 @@ public class boss : MonoBehaviour
         }
     }
     public Collider2D AttackHitbox;
+    public AudioSource KrantuzHurt;
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col == AttackHitbox && iFrames == 0)
         {
+            KrantuzHurt.Play();
             iFrames = 30;
             Debug.Log("boss damage" + PlayerScript.PlayerDamage.ToString());
             enemyHP -= PlayerScript.PlayerDamage;

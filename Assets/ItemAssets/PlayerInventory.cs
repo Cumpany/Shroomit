@@ -121,6 +121,12 @@ public class PlayerInventory : MonoBehaviour
         }
         return false;
     }
+    public static void RemoveItem(int x)
+    {
+        Inv[x] = 0;
+        var i = new PlayerInventory();
+        i.DrawInv();
+    }
     public void CursorToInv(int x)
     {
         if (Cursor != 0 && Inv[x] == 0)

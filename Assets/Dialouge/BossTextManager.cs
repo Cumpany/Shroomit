@@ -18,6 +18,7 @@ public class BossTextManager : MonoBehaviour
     public bool BossCanMove = false;
 
     public Movement player;
+    public AudioSource KratuzVoice;
 
     // Start is called before the first frame update
     void Start()

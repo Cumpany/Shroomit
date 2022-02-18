@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,9 @@ public class BossBarrier : MonoBehaviour
             Bar = Barrier;
             this.gameObject.SetActive(false);
             BossHealth.SetActive(true);
+            Camera.main.GetComponent<PlayerFollow>().LobbyMusic.Stop();
+            KrantuzVoice.Play();
         }
     }
+    public AudioSource KrantuzVoice;
 }
