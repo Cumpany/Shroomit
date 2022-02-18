@@ -69239,6 +69239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf18f4357d3c9164394b9257bab58ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nPCscript: {fileID: 0}
   talkText: {fileID: 503125314}
   textBox: {fileID: 296934896}
   theText: {fileID: 342653944}
@@ -72922,11 +72923,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4976984448715127152, guid: 8bdd466dc2afc454c9a2244824d445e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.3
+      value: 88.3
       objectReference: {fileID: 0}
     - target: {fileID: 4976984448715127152, guid: 8bdd466dc2afc454c9a2244824d445e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.6
+      value: 42.4
       objectReference: {fileID: 0}
     - target: {fileID: 4976984448715127152, guid: 8bdd466dc2afc454c9a2244824d445e5, type: 3}
       propertyPath: m_LocalPosition.z
