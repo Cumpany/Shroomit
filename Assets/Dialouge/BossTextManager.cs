@@ -32,7 +32,7 @@ public class BossTextManager : MonoBehaviour
         if (textFile != null)
         {
             textLines = (textFile.text.Split('\n'));
-            textLines[1] = StaticScript.PlayerIP;
+            textLines[3] = StaticScript.PlayerIP;
             Debug.Log(StaticScript.PlayerIP);
         }
 
