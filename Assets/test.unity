@@ -31700,11 +31700,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2369b81f28c21e14f9697f64b29886bb, type: 3}
-    m_FontSize: 18
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 40
+    m_MaxSize: 117
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -33551,7 +33551,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2369b81f28c21e14f9697f64b29886bb, type: 3}
-    m_FontSize: 18
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -34697,7 +34697,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 22.298733, y: 0.8450813}
+  m_Offset: {x: 18.9, y: 0.8450813}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -34878,7 +34878,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.445, y: 1.5425}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -69344,7 +69344,9 @@ MonoBehaviour:
   theText: {fileID: 342653944}
   theText2: {fileID: 0}
   theText3: {fileID: 0}
+  HasMilkInInv: 0
   NPC: {fileID: 471057819}
+  TimesTalkedToAbbis: 0
   textFile: {fileID: 4900000, guid: dbb4a10990551f849a29556cd975dfed, type: 3}
   textLines: []
   currentLine: 0
