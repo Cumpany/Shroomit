@@ -10,6 +10,8 @@ public class TextBoxManager : MonoBehaviour
     public GameObject talkText;
     public GameObject textBox;
 
+    public GameObject BossEntranceBarrier;
+
     public Text theText;
     public Text theText2;
     public Text theText3;
@@ -34,6 +36,8 @@ public class TextBoxManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BossEntranceBarrier.SetActive(true);
+
         endAtLine = 7;
 
         player = FindObjectOfType<Movement>();
@@ -104,7 +108,6 @@ public class TextBoxManager : MonoBehaviour
             endAtLine = 10;
             currentLine = 9;
             HasTalkedToAbbis = true;
-            PlayerScript.Gold += 10;
         }
         else if (currentLine > endAtLine - 1 && TimesTalkedToAbbis == 1 && !HasMilkInInv && !HasGivenMilkToAbbis) //Second time talking to abbis without the glass of milk
         {
@@ -135,6 +138,8 @@ public class TextBoxManager : MonoBehaviour
             HasGivenMilkToAbbis = true;
             var i = PlayerInventory.Hasitem(ItemList.Items.Milk);
             PlayerInventory.RemoveItem(i);
+            BossEntranceBarrier.SetActive(false);
+            PlayerScript.Gold += 10;
         }
         else if (TimesTalkedToAbbis == 10) //abbis dialogue completed
         {
