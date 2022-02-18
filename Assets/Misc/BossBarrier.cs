@@ -32,7 +32,9 @@ public class BossBarrier : MonoBehaviour
             BossHealth.SetActive(true);
             Camera.main.GetComponent<PlayerFollow>().LobbyMusic.Stop();
             KrantuzVoice.Play();
+            DarkMusic.Play();
         }
     }
     public AudioSource KrantuzVoice;
+    public AudioSource DarkMusic;
 }
