@@ -314,8 +314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fd14e5bc38691944ab915e6fee636d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Loot: {fileID: 753446406404354282, guid: 25c345529eb4c92448b59f3cd6ea71e2, type: 3}
-  Loot2: {fileID: 7719658302025506776, guid: 4c4ba4e7a6af8a1429a47ff327e1a241, type: 3}
+  Loot: {fileID: 0}
+  Loot2: {fileID: 0}
   target: {fileID: 0}
   maxEnemyHP: 50
   enemyHP: 50
