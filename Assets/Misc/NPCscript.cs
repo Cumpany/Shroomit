@@ -69,7 +69,7 @@ public class NPCscript : MonoBehaviour
             case "3":
                 audio.clip = audioClip3;
                 break;
-            case "¨4":
+            case "4":
                 audio.clip = audioClip4;
                 break;
             case "5":
