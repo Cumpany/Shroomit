@@ -89,10 +89,15 @@ public class MainMenu : MonoBehaviour
     }
     public void ShowIP(bool t)
     {
+        StaticScript.PlayerIP = "127.0.0.1";
         if (!t)
         {
-            StaticScript.PlayerIP = "172.0.0.1";
+            StaticScript.PlayerIP = "127.0.0.1";
             Debug.Log("hiding player ip");
+        }
+        else
+        {
+            StaticScript.PlayerIP = null;
         }
         GameObject.Find("KrantuzLocation").SetActive(false);
     }
