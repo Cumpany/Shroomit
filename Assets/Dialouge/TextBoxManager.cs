@@ -9,6 +9,10 @@ public class TextBoxManager : MonoBehaviour
     public GameObject textBox;
 
     public Text theText;
+    public Text theText2;
+    public Text theText3;
+
+    public GameObject NPC;
 
     public TextAsset textFile;
     public string[] textLines;
@@ -54,7 +58,7 @@ public class TextBoxManager : MonoBehaviour
     public void CurrentLineUpdate()
     {
         currentLine += 1;
-
+        NPC.GetComponent<AudioSource>().Play();
         if (currentLine > textLines.Length - 1)
         {
             if (!HasTalkedToAbbis)
@@ -70,7 +74,8 @@ public class TextBoxManager : MonoBehaviour
     }
 
     public void ActivateTextBox()
-    {   
+    {
+        NPC.GetComponent<AudioSource>().Play();
         player.CanMove = false;
         textBox.SetActive(true);
     }
