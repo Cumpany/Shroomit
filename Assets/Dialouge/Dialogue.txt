@@ -7,7 +7,7 @@ Here, take this <color=#73c6fa>Shroomsword</color> and get me my MILK back!
 <color=#de1f1f>Press</color> <color=#73c6fa>(left click)</color> <color=#de1f1f>if you want to attack</color>
 When you have it <color=#de1f1f>come back here</color> so I can give you a reward and a clue where you should head next on your journey! 
 
-Goodluck, and DON'T DRINK THAT MILK!
+
 
 Good work traveler getting my MILK back!
 Now as promised I will give you a clue on where you should head next and <color=#73c6fa>10 coins</color>.
@@ -15,3 +15,4 @@ Now as promised I will give you a clue on where you should head next and <color=
 Good luck and thanks again!
 
 Good luck on your journey!
+

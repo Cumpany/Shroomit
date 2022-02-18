@@ -18,8 +18,6 @@ public class TextBoxManager : MonoBehaviour
 
     public bool HasMilkInInv;
 
-    public bool HasGivenMilkToAbbis = false;
-
     public GameObject NPC;
 
     public int TimesTalkedToAbbis;
@@ -60,7 +58,6 @@ public class TextBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currentLine);
         theText.text = textLines[currentLine];
 
         var i = PlayerInventory.Hasitem(ItemList.Items.Milk);
@@ -83,15 +80,7 @@ public class TextBoxManager : MonoBehaviour
     public void CurrentLineUpdate()
     {
         currentLine += 1;
-        if (HasMilkInInv)
-        {
-            currentLine = 11;
-            endAtLine = 15;
-        }
-        if (HasGivenMilkToAbbis)
-        {
-            TimesTalkedToAbbis = 10;
-        }
+
         NPC.GetComponent<AudioSource>().Play();
         if (currentLine > endAtLine - 1 && TimesTalkedToAbbis == 0) //First time talking to Abbis
         {
@@ -100,47 +89,26 @@ public class TextBoxManager : MonoBehaviour
             {
                 PlayerInventory.AnyInvSlot((ItemList.Items)5);
             }
-            TimesTalkedToAbbis++;
             player.CanMove = true;
             talkText.SetActive(true);
             textBox.SetActive(false);
-            endAtLine = 10;
-            currentLine = 9;
             HasTalkedToAbbis = true;
+            TimesTalkedToAbbis = 1;
         }
-        else if (currentLine > endAtLine - 1 && TimesTalkedToAbbis == 1 && !HasMilkInInv && !HasGivenMilkToAbbis) //Second time talking to abbis without the glass of milk
-        {
-            Debug.Log("2");
-            player.CanMove = true;
-            talkText.SetActive(true);
-            textBox.SetActive(false);
-            currentLine = 9;
-            endAtLine = 10;
-            /*if (TimesTalkedToAbbis != 1 && TimesTalkedToAbbis != 2)
-            {
-                TimesTalkedToAbbis = 2;
-            }
-            else
-            {
-                TimesTalkedToAbbis++;
-            }*/
-        }
-        else if (currentLine > endAtLine - 1 && TimesTalkedToAbbis == 1 && HasMilkInInv) //Second time talking to abbis with milk
+        
+        else if (currentLine > endAtLine - 1 && HasMilkInInv) //Second time talking to abbis with milk
         {
             Debug.Log("3");
             player.CanMove = true;
             talkText.SetActive(true);
             textBox.SetActive(false);
-            TimesTalkedToAbbis = 10;
-            currentLine = 16;
-            endAtLine = 16;
-            HasGivenMilkToAbbis = true;
             var i = PlayerInventory.Hasitem(ItemList.Items.Milk);
             PlayerInventory.RemoveItem(i);
             BossEntranceBarrier.SetActive(false);
             PlayerScript.Gold += 10;
         }
-        else if (TimesTalkedToAbbis == 10) //abbis dialogue completed
+
+        else if (currentLine > endAtLine && currentLine == 18) //abbis dialogue completed
         {
             Debug.Log("4");
             player.CanMove = true;
@@ -154,5 +122,21 @@ public class TextBoxManager : MonoBehaviour
         NPC.GetComponent<AudioSource>().Play();
         player.CanMove = false;
         textBox.SetActive(true);
+
+        if (HasMilkInInv)
+        {
+            currentLine = 11;
+            endAtLine = 15;
+        }
+        else if (!HasTalkedToAbbis)
+        {
+            currentLine = 0;
+            endAtLine = 8;
+        }
+        else
+        {
+            currentLine = 16;
+            endAtLine = 16;
+        }
     }
 }

@@ -144,7 +144,7 @@ public class PlayerInventory : MonoBehaviour
     {
         Inv[x] = 0;
         var i = new PlayerInventory();
-        i.DrawInv();
+        //i.DrawInv();
     }
     public void CursorToInv(int x)
     {
