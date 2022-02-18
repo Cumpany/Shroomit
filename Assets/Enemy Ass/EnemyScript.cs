@@ -16,6 +16,7 @@ public class EnemyScript : MonoBehaviour
     private GameObject HpBar;
     void Start()
     {
+        target = GameObject.FindWithTag("Player");
         HpBar = this.transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
         DrawHP();
     }
@@ -51,6 +52,17 @@ public class EnemyScript : MonoBehaviour
         if (iFrames > 0)
         {
             iFrames--;
+        }
+
+        float x = target.transform.position.x - gameObject.transform.position.x;
+
+        if (x < 0 && target != null)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (x > 0 && target != null)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 
