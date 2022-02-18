@@ -62,12 +62,14 @@ public class BossTextManager : MonoBehaviour
             player.CanMove = true;
             textBox.SetActive(false);
             currentLine = 0;
+            Time.timeScale = 1;
         }
     }
 
     public void ActivateTextBox()
     {
         player.CanMove = false;
+        Time.timeScale = 0.1f;
         textBox.SetActive(true);
     }
 }
