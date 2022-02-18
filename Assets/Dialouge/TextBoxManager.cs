@@ -60,7 +60,6 @@ public class TextBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         Debug.Log(currentLine);
         theText.text = textLines[currentLine];
 
@@ -134,7 +133,7 @@ public class TextBoxManager : MonoBehaviour
             textBox.SetActive(false);
             TimesTalkedToAbbis = 10;
             currentLine = 16;
-            endAtLine = 69;
+            endAtLine = 16;
             HasGivenMilkToAbbis = true;
             var i = PlayerInventory.Hasitem(ItemList.Items.Milk);
             PlayerInventory.RemoveItem(i);
