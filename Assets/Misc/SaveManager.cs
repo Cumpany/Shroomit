@@ -222,5 +222,6 @@ public class SaveManager : MonoBehaviour
         boss.enemyHP = boss.maxEnemyHP;
         PlayerScript.health = PlayerScript.maxHealth;
         PlayerInventory.ClearInv();
+        PlayerScript.Gold = 0;
     }
 }
