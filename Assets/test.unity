@@ -70367,7 +70367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b79dbb5cfae77ee4a9175936b435eb9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  miniboss: {fileID: 0}
+  miniboss: {fileID: 2137698164658228041}
   ForestBarrier: {fileID: 2035314735}
 --- !u!61 &1576695114
 BoxCollider2D:
@@ -72562,3 +72562,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bdd466dc2afc454c9a2244824d445e5, type: 3}
+--- !u!1 &2137698164658228041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5721234491018309454, guid: 8bdd466dc2afc454c9a2244824d445e5, type: 3}
+  m_PrefabInstance: {fileID: 2137698164658228040}
+  m_PrefabAsset: {fileID: 0}
