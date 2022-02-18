@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TextBoxManager : MonoBehaviour
 {
+    public NPCscript nPCscript;
+
     public GameObject talkText;
     public GameObject textBox;
 

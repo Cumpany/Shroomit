@@ -16,10 +16,11 @@ public class NPCscript : MonoBehaviour
     public AudioClip audioClip4;
     public AudioClip audioClip5;
 
-    public int ok;
+    public int ok = 1;
 
     void Start()
     {
+        ok = 1;
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioClip1;
         TalkText.SetActive(false);
@@ -27,9 +28,10 @@ public class NPCscript : MonoBehaviour
 
     void Update()
     {
-        ok = 1;
-        ChangeAudio(ok, 1);
-       
+        if (!audioSource.isPlaying)
+        {
+            ChangeAudio(ok, 1);
+        }
 
         if (inRange)
         {
@@ -58,7 +60,7 @@ public class NPCscript : MonoBehaviour
         }
     }
 
-    void ChangeAudio(int i, int x)
+    public void ChangeAudio(int i, int x)
     {
         ok += x;
         if (ok > 5)
