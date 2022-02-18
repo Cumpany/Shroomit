@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -76,6 +77,20 @@ public class PlayerScript : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
             PlayerScript.health = float.MaxValue;
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log(F());
+        }
+    }
+    string F()
+    {
+        TimeSpan t = TimeSpan.FromSeconds( StaticScript.Timer/50 );
+
+        string answer = string.Format("{0:D2}:{1:D2}.{2:D3}", 
+            t.Minutes, 
+            t.Seconds, 
+            t.Milliseconds);
+        return answer;
     }
     void FixedUpdate()
     {

@@ -27,8 +27,7 @@ public class MainMenu : MonoBehaviour
             Debug.Log(StaticScript.Timer);
             t = StaticScript.Timer;
             Debug.Log(t);
-            Debug.Log(t);
-            GameObject.Find("TimerText").GetComponent<Text>().text = (t/50).ToString();
+            GameObject.Find("TimerText").GetComponent<Text>().text = F();
         }
     }
     private float t;
@@ -40,8 +39,18 @@ public class MainMenu : MonoBehaviour
             return;
         }
         var d = new DcSend();
-        d.Send($"**{(t/50).ToString()}** achieved by **{MainMenu.PlayerName}**");
+        d.Send($"**{F()}** achieved by **{MainMenu.PlayerName}**");
         TimeSubmited = true;
+    }
+    string F()
+    {
+        TimeSpan t = TimeSpan.FromSeconds( StaticScript.Timer/50 );
+
+        string answer = string.Format("{0:D2}:{1:D2}.{2:D3}", 
+            t.Minutes, 
+            t.Seconds, 
+            t.Milliseconds);
+        return answer;
     }
 
     public void StartGame()
