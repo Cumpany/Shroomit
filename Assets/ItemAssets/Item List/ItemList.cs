@@ -17,6 +17,7 @@ public class ItemList : MonoBehaviour
         Sword_1,
         Sword_2,
         Sword_3,
-        Sword_4
+        Sword_4,
+        Milk
     }
 }

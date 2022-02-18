@@ -159,4 +159,15 @@ public class PlayerInventory : MonoBehaviour
         Cursor = 0;
         Debug.LogWarning("cleared inventory and cursor");
     }
+    public static int Hasitem(ItemList.Items i)
+    {
+        for (var j = 0; j < 9; j++)
+        {
+            if (PlayerInventory.Inv[j] == i)
+            {
+                return j;
+            }
+        }
+        return -1;
+    }
 }
