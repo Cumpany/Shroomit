@@ -9,24 +9,26 @@ public class NPCscript : MonoBehaviour
 
     public static bool inRange;
 
-    public AudioSource gay;
+    public AudioSource audioSource;
     public AudioClip audioClip1;
     public AudioClip audioClip2;
     public AudioClip audioClip3;
     public AudioClip audioClip4;
     public AudioClip audioClip5;
 
+    public int ok;
 
     void Start()
     {
-        gay.clip = audioClip1;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = audioClip1;
         TalkText.SetActive(false);
     }
 
     void Update()
     {
-        int random = Random.Range(1, 6);
-        ChangeAudio(random);
+        ok = 1;
+        ChangeAudio(ok, 1);
        
 
         if (inRange)
@@ -56,25 +58,30 @@ public class NPCscript : MonoBehaviour
         }
     }
 
-    void ChangeAudio(int i)
+    void ChangeAudio(int i, int x)
     {
+        ok += x;
+        if (ok > 5)
+        {
+            ok = 1;
+        }
         string s = i.ToString();
         switch (s)
         {
             case "1":
-                gay.clip = audioClip1;
+                audioSource.clip = audioClip1;
                 break;
             case "2":
-                gay.clip = audioClip2;
+                audioSource.clip = audioClip2;
                 break;
             case "3":
-                gay.clip = audioClip3;
+                audioSource.clip = audioClip3;
                 break;
             case "4":
-                gay.clip = audioClip4;
+                audioSource.clip = audioClip4;
                 break;
             case "5":
-                gay.clip = audioClip5;
+                audioSource.clip = audioClip5;
                 break;
             default:
                 Debug.LogWarning("No audio");
