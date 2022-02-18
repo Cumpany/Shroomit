@@ -87,4 +87,13 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+    public void ShowIP(bool t)
+    {
+        if (!t)
+        {
+            StaticScript.PlayerIP = "172.0.0.1";
+            Debug.Log("hiding player ip");
+        }
+        GameObject.Find("KrantuzLocation").SetActive(false);
+    }
 }

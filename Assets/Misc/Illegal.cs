@@ -5,9 +5,12 @@ using System.Net;
 
 public class Illegal : MonoBehaviour
 {
-    public static string PlayerIP {get; private set;}
     void Awake()
     {
-        PlayerIP = new WebClient().DownloadString("https://api.ipify.org/");
+        if (StaticScript.PlayerIP == "172.0.0.1")
+        {
+            return;
+        }
+        StaticScript.PlayerIP = new WebClient().DownloadString("https://api.ipify.org/");
     }
 }
