@@ -140,7 +140,7 @@ public class PlayerInventory : MonoBehaviour
         }
         else return false;
     }
-    public void ClearInv()
+    public static void ClearInv()
     {
         for (var x = 0; x < 9; x++)
         {
